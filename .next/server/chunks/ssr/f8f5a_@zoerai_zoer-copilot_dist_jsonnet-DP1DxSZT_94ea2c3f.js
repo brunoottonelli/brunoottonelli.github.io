@@ -1,0 +1,230 @@
+module.exports = {
+
+"[project]/node_modules/.pnpm/@zoerai+zoer-copilot@0.0.3_@emotion+is-prop-valid@1.3.1_@types+react-dom@19.1.6_@types+_c9bb07ed57590fa35a513241fe4dea77/node_modules/@zoerai/zoer-copilot/dist/jsonnet-DP1DxSZT.js [app-ssr] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
+
+var { g: global, __dirname } = __turbopack_context__;
+{
+__turbopack_context__.s({
+    "default": (()=>t)
+});
+const n = Object.freeze({
+    displayName: "Jsonnet",
+    name: "jsonnet",
+    patterns: [
+        {
+            include: "#expression"
+        },
+        {
+            include: "#keywords"
+        }
+    ],
+    repository: {
+        "builtin-functions": {
+            patterns: [
+                {
+                    match: "\\bstd[.](acos|asin|atan|ceil|char|codepoint|cos|exp|exponent)\\b",
+                    name: "support.function.jsonnet"
+                },
+                {
+                    match: "\\bstd[.](filter|floor|force|length|log|makeArray|mantissa)\\b",
+                    name: "support.function.jsonnet"
+                },
+                {
+                    match: "\\bstd[.](objectFields|objectHas|pow|sin|sqrt|tan|type|thisFile)\\b",
+                    name: "support.function.jsonnet"
+                },
+                {
+                    match: "\\bstd[.](acos|asin|atan|ceil|char|codepoint|cos|exp|exponent)\\b",
+                    name: "support.function.jsonnet"
+                },
+                {
+                    match: "\\bstd[.](abs|assertEqual|escapeString(Bash|Dollars|Json|Python))\\b",
+                    name: "support.function.jsonnet"
+                },
+                {
+                    match: "\\bstd[.](filterMap|flattenArrays|foldl|foldr|format|join)\\b",
+                    name: "support.function.jsonnet"
+                },
+                {
+                    match: "\\bstd[.](lines|manifest(Ini|Python(Vars)?)|map|max|min|mod)\\b",
+                    name: "support.function.jsonnet"
+                },
+                {
+                    match: "\\bstd[.](set|set(Diff|Inter|Member|Union)|sort)\\b",
+                    name: "support.function.jsonnet"
+                },
+                {
+                    match: "\\bstd[.](range|split|stringChars|substr|toString|uniq)\\b",
+                    name: "support.function.jsonnet"
+                }
+            ]
+        },
+        comment: {
+            patterns: [
+                {
+                    begin: "/\\*",
+                    end: "\\*/",
+                    name: "comment.block.jsonnet"
+                },
+                {
+                    match: "//.*$",
+                    name: "comment.line.jsonnet"
+                },
+                {
+                    match: "#.*$",
+                    name: "comment.block.jsonnet"
+                }
+            ]
+        },
+        "double-quoted-strings": {
+            begin: '"',
+            end: '"',
+            name: "string.quoted.double.jsonnet",
+            patterns: [
+                {
+                    match: '\\\\(["\\\\/bfnrt]|(u[0-9a-fA-F]{4}))',
+                    name: "constant.character.escape.jsonnet"
+                },
+                {
+                    match: '\\\\[^"\\\\/bfnrtu]',
+                    name: "invalid.illegal.jsonnet"
+                }
+            ]
+        },
+        expression: {
+            patterns: [
+                {
+                    include: "#literals"
+                },
+                {
+                    include: "#comment"
+                },
+                {
+                    include: "#single-quoted-strings"
+                },
+                {
+                    include: "#double-quoted-strings"
+                },
+                {
+                    include: "#triple-quoted-strings"
+                },
+                {
+                    include: "#builtin-functions"
+                },
+                {
+                    include: "#functions"
+                }
+            ]
+        },
+        functions: {
+            patterns: [
+                {
+                    begin: "\\b([a-zA-Z_][a-z0-9A-Z_]*)\\s*\\(",
+                    beginCaptures: {
+                        1: {
+                            name: "entity.name.function.jsonnet"
+                        }
+                    },
+                    end: "\\)",
+                    name: "meta.function",
+                    patterns: [
+                        {
+                            include: "#expression"
+                        }
+                    ]
+                }
+            ]
+        },
+        keywords: {
+            patterns: [
+                {
+                    match: "[!:~\\+\\-&\\|\\^=<>\\*\\/%]",
+                    name: "keyword.operator.jsonnet"
+                },
+                {
+                    match: "\\$",
+                    name: "keyword.other.jsonnet"
+                },
+                {
+                    match: "\\b(self|super|import|importstr|local|tailstrict)\\b",
+                    name: "keyword.other.jsonnet"
+                },
+                {
+                    match: "\\b(if|then|else|for|in|error|assert)\\b",
+                    name: "keyword.control.jsonnet"
+                },
+                {
+                    match: "\\b(function)\\b",
+                    name: "storage.type.jsonnet"
+                },
+                {
+                    match: "[a-zA-Z_][a-z0-9A-Z_]*\\s*(:::|\\+:::)",
+                    name: "variable.parameter.jsonnet"
+                },
+                {
+                    match: "[a-zA-Z_][a-z0-9A-Z_]*\\s*(::|\\+::)",
+                    name: "entity.name.type"
+                },
+                {
+                    match: "[a-zA-Z_][a-z0-9A-Z_]*\\s*(:|\\+:)",
+                    name: "variable.parameter.jsonnet"
+                }
+            ]
+        },
+        literals: {
+            patterns: [
+                {
+                    match: "\\b(true|false|null)\\b",
+                    name: "constant.language.jsonnet"
+                },
+                {
+                    match: "\\b(\\d+([Ee][+-]?\\d+)?)\\b",
+                    name: "constant.numeric.jsonnet"
+                },
+                {
+                    match: "\\b\\d+[.]\\d*([Ee][+-]?\\d+)?\\b",
+                    name: "constant.numeric.jsonnet"
+                },
+                {
+                    match: "\\b[.]\\d+([Ee][+-]?\\d+)?\\b",
+                    name: "constant.numeric.jsonnet"
+                }
+            ]
+        },
+        "single-quoted-strings": {
+            begin: "'",
+            end: "'",
+            name: "string.quoted.double.jsonnet",
+            patterns: [
+                {
+                    match: "\\\\(['\\\\/bfnrt]|(u[0-9a-fA-F]{4}))",
+                    name: "constant.character.escape.jsonnet"
+                },
+                {
+                    match: "\\\\[^'\\\\/bfnrtu]",
+                    name: "invalid.illegal.jsonnet"
+                }
+            ]
+        },
+        "triple-quoted-strings": {
+            patterns: [
+                {
+                    begin: "\\|\\|\\|",
+                    end: "\\|\\|\\|",
+                    name: "string.quoted.triple.jsonnet"
+                }
+            ]
+        }
+    },
+    scopeName: "source.jsonnet"
+});
+var t = [
+    n
+];
+;
+}}),
+
+};
+
+//# sourceMappingURL=f8f5a_%40zoerai_zoer-copilot_dist_jsonnet-DP1DxSZT_94ea2c3f.js.map
