@@ -56,7 +56,7 @@ export function HeroSection() {
               <Button
                 variant="outline"
                 size="icon"
-                className="rounded-full"
+                className="rounded-full hover:text-primary transition-colors"
                 onClick={() => window.open('https://linkedin.com/in/bruno-ottonelli', '_blank')}
               >
                 <Linkedin className="h-5 w-5" />
@@ -64,7 +64,7 @@ export function HeroSection() {
               <Button
                 variant="outline"
                 size="icon"
-                className="rounded-full"
+                className="rounded-full hover:text-primary transition-colors"
                 onClick={() => window.open('https://github.com/brunoottonelli', '_blank')}
               >
                 <Github className="h-5 w-5" />
@@ -72,7 +72,7 @@ export function HeroSection() {
               <Button
                 variant="outline"
                 size="icon"
-                className="rounded-full"
+                className="rounded-full hover:text-primary transition-colors"
                 onClick={() => window.location.href = 'mailto:bruno.ottonelli@example.com'}
               >
                 <Mail className="h-5 w-5" />

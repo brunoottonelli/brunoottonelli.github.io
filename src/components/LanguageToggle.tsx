@@ -13,7 +13,7 @@ export function LanguageToggle() {
         variant={language === 'es' ? 'default' : 'ghost'}
         size="sm"
         onClick={() => setLanguage('es')}
-        className="h-8 px-3 text-xs font-medium"
+        className="h-8 px-3 text-xs font-medium hover:text-primary transition-colors"
       >
         ES
       </Button>
@@ -21,7 +21,7 @@ export function LanguageToggle() {
         variant={language === 'en' ? 'default' : 'ghost'}
         size="sm"
         onClick={() => setLanguage('en')}
-        className="h-8 px-3 text-xs font-medium"
+        className="h-8 px-3 text-xs font-medium hover:text-primary transition-colors"
       >
         EN
       </Button>
