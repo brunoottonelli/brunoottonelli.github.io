@@ -25,13 +25,13 @@ export function ThemeToggle() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme("light")}>
+        <DropdownMenuItem onClick={() => setTheme("light")} className="hover:bg-accent hover:!text-primary focus:hover:!text-primary transition-colors">
           Light
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
+        <DropdownMenuItem onClick={() => setTheme("dark")} className="hover:bg-accent hover:!text-primary focus:hover:!text-primary transition-colors">
           Dark
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
+        <DropdownMenuItem onClick={() => setTheme("system")} className="hover:bg-accent hover:!text-primary focus:hover:!text-primary transition-colors">
           System
         </DropdownMenuItem>
       </DropdownMenuContent>

@@ -86,7 +86,7 @@ export function HeroSection() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl blur-3xl"></div>
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-3xl overflow-hidden border-4 border-border shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=800&fit=crop"
+                  src="/images/profile2.webp"
                   alt="Bruno Ottonelli"
                   className="w-full h-full object-cover"
                 />
@@ -103,7 +103,7 @@ export function HeroSection() {
         aria-label="Scroll to About section"
       >
         <span className="text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-          {language === 'es' ? 'Conoce más' : 'Learn more'}
+          {language === 'es' ? 'Más sobre mi' : 'More about me'}
         </span>
         <div className="w-10 h-10 rounded-full border-2 border-current flex items-center justify-center animate-bounce">
           <ChevronDown className="h-5 w-5" />

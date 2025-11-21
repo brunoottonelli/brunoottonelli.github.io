@@ -1,4 +1,4 @@
 {
-  "/zoer_proxy/[...path]/route": "app/zoer_proxy/[...path]/route.js",
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/zoer_proxy/[...path]/route": "app/zoer_proxy/[...path]/route.js"
 }
