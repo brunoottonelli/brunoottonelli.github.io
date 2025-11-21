@@ -15,8 +15,8 @@ export function ContactSection() {
     {
       icon: Mail,
       label: t.contact.email,
-      value: 'bruno.ottonelli@example.com',
-      href: 'mailto:bruno.ottonelli@example.com',
+      value: 'brunoottonelli@gmail.com',
+      href: 'mailto:brunoottonelli@example.com',
       color: 'text-blue-500',
     },
     {
@@ -29,8 +29,8 @@ export function ContactSection() {
     {
       icon: Github,
       label: t.contact.github,
-      value: 'bruno-ottonelli',
-      href: 'https://github.com/bruno-ottonelli',
+      value: 'brunoottonelli',
+      href: 'https://github.com/brunoottonelli',
       color: 'text-gray-700 dark:text-gray-300',
     },
   ];
@@ -66,7 +66,7 @@ export function ContactSection() {
             <Button
               size="lg"
               className="gap-2"
-              onClick={() => window.location.href = 'mailto:bruno.ottonelli@example.com'}
+              onClick={() => window.location.href = 'mailto:brunoottonelli@gmail.com'}
             >
               <Send className="h-4 w-4" />
               {t.contact.email}

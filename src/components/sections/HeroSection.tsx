@@ -12,7 +12,7 @@ export function HeroSection() {
   const t = useTranslation(language);
 
   const handleDownloadCV = () => {
-    const cvUrl = language === 'es' ? '/cv-bruno-ottonelli-es.pdf' : '/cv-bruno-ottonelli-en.pdf';
+    const cvUrl = language === 'es' ? '/documents/cv-bruno-ottonelli-es.pdf' : '/documents/cv-bruno-ottonelli-en.pdf';
     window.open(cvUrl, '_blank');
   };
 
@@ -65,7 +65,7 @@ export function HeroSection() {
                 variant="outline"
                 size="icon"
                 className="rounded-full"
-                onClick={() => window.open('https://github.com/bruno-ottonelli', '_blank')}
+                onClick={() => window.open('https://github.com/brunoottonelli', '_blank')}
               >
                 <Github className="h-5 w-5" />
               </Button>

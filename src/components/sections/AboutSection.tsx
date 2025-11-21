@@ -21,9 +21,9 @@ export function AboutSection() {
             <div className="flex justify-center lg:justify-start">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl blur-2xl"></div>
-                <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-3xl overflow-hidden border-4 border-border shadow-2xl">
+                <div className="relative w-80 h-64 sm:w-96 sm:h-80 lg:w-[500px] lg:h-96 rounded-3xl overflow-hidden border-4 border-border shadow-2xl">
                   <img
-                    src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&h=800&fit=crop"
+                    src="/images/Facultad_de_Ingeniería_(Uruguay).jpg"
                     alt="FING - Universidad de la República"
                     className="w-full h-full object-cover"
                   />
