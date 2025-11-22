@@ -13,7 +13,9 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 export function ThemeToggle() {
-  const { setTheme } = useTheme();
+  {/*const { setTheme } = useTheme();*/}
+  const { theme, setTheme } = useTheme();
+
 
   return (
     <DropdownMenu>
@@ -25,7 +27,7 @@ export function ThemeToggle() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme("light")} className="hover:bg-accent hover:!text-primary focus:hover:!text-primary transition-colors">
+        {/*<DropdownMenuItem onClick={() => setTheme("light")} className="hover:bg-accent hover:!text-primary focus:hover:!text-primary transition-colors">
           Light
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("dark")} className="hover:bg-accent hover:!text-primary focus:hover:!text-primary transition-colors">
@@ -33,7 +35,39 @@ export function ThemeToggle() {
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")} className="hover:bg-accent hover:!text-primary focus:hover:!text-primary transition-colors">
           System
+        </DropdownMenuItem>*/}
+        <DropdownMenuItem
+          onClick={() => setTheme("light")}
+          className={`flex items-center justify-between transition-colors
+            ${theme === "light" ? "bg-accent text-primary font-medium" : "hover:bg-accent"}
+          `}
+        >
+          Light
+          {theme === "light" && <span>✓</span>}
         </DropdownMenuItem>
+
+        <DropdownMenuItem
+          onClick={() => setTheme("dark")}
+          className={`flex items-center justify-between transition-colors
+            ${theme === "dark" ? "bg-accent text-primary font-medium" : "hover:bg-accent"}
+          `}
+        >
+          Dark
+          {theme === "dark" && <span>✓</span>}
+        </DropdownMenuItem>
+
+        <DropdownMenuItem
+          onClick={() => setTheme("system")}
+          className={`flex items-center justify-between transition-colors
+            ${theme === "system" ? "bg-accent text-primary font-medium" : "hover:bg-accent"}
+          `}
+        >
+          System
+          {theme === "system" && <span>✓</span>}
+        </DropdownMenuItem>
+
+
+
       </DropdownMenuContent>
     </DropdownMenu>
   );
