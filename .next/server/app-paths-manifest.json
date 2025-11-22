@@ -1,5 +1,1 @@
-{
-  "/next_api/contact/route": "app/next_api/contact/route.js",
-  "/page": "app/page.js",
-  "/zoer_proxy/[...path]/route": "app/zoer_proxy/[...path]/route.js"
-}
+{}
