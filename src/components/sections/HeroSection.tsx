@@ -86,7 +86,7 @@ export function HeroSection() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl blur-3xl"></div>
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-3xl overflow-hidden border-4 border-border shadow-2xl">
                 <img
-                  src="/images/profile2.webp"
+                  src="/images/profile.webp"
                   alt="Bruno Ottonelli"
                   className="w-full h-full object-cover"
                 />
