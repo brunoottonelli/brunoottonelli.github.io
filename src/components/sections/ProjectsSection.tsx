@@ -1,12 +1,22 @@
-
 'use client';
 
-import { ArrowRight, ExternalLink, Github } from 'lucide-react';
+import { ArrowRight, Github } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from '@/lib/i18n';
+
+// NEW: imports necesarios para el panel lateral (sheet)
+import { useState } from "react";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetDescription,
+} from "@/components/ui/sheet";
+
 
 const projectsData = {
   es: [
@@ -91,9 +101,13 @@ export function ProjectsSection() {
 
   const projects = projectsData[language];
 
+  // NEW: proyecto seleccionado (para el panel)
+  const [selectedProject, setSelectedProject] = useState(null);
+
   return (
     <section id="projects" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">{t.projects.title}</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -115,16 +129,16 @@ export function ProjectsSection() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
               </div>
-              
+
               <CardHeader>
                 <CardTitle className="text-xl">{project.name}</CardTitle>
               </CardHeader>
-              
+
               <CardContent className="flex-1 flex flex-col gap-4">
                 <p className="text-sm text-muted-foreground flex-1">
                   {project.description}
                 </p>
-                
+
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
                     <Badge key={tech} variant="secondary" className="text-xs">
@@ -132,6 +146,8 @@ export function ProjectsSection() {
                     </Badge>
                   ))}
                 </div>
+
+                {/* Botones */}
                 <div className="flex flex-col gap-2">
                   {/* GitHub button */}
                   <Button
@@ -153,7 +169,7 @@ export function ProjectsSection() {
                     </span>
                   </Button>
 
-                  {/* Show more button */}
+                  {/* Show more button (abre panel lateral) */}
                   <Button
                     variant="outline"
                     className="
@@ -165,66 +181,61 @@ export function ProjectsSection() {
                       dark:hover:!bg-primary/10
                       transition-colors
                     "
-                    onClick={() => console.log('Show more clicked:', project.name)}
+                    onClick={() => setSelectedProject(project)} // OPEN PANEL
                   >
-                    <ArrowRight className="h-4 w-4 transition-colors group-hover/button:text-primary" />                  
+                    <ArrowRight className="h-4 w-4 transition-colors group-hover/button:text-primary" />
                     <span className="transition-colors group-hover/button:text-primary">
                       {t.projects.showMore}
                     </span>
                   </Button>
                 </div>
-
-                {/*<Button
-                  variant="outline"
-                  onClick={() => window.open(project.github, "_blank")}
-                  className="
-                    w-full gap-2 
-                    group/button 
-                    border-border 
-                    hover:border-primary 
-                    hover:bg-primary/10 
-                    transition-all 
-                    duration-300 
-                    rounded-xl
-                  "
-                >
-                  <Github
-                    className="
-                      h-4 w-4 
-                      transition-transform 
-                      duration-300
-                      group-hover/button:translate-x-1 
-                      group-hover/button:text-primary
-                    "
-                  />
-
-                  <span
-                    className="
-                      transition-colors 
-                      duration-300
-                      group-hover/button:text-primary
-                    "
-                  >
-                    {t.projects.viewOnGithub}
-                  </span>
-
-                  <ExternalLink
-                    className="
-                      ml-auto h-4 w-4 opacity-0 
-                      transition-all duration-300 
-                      group-hover/button:opacity-100 
-                      group-hover/button:translate-x-1
-                    "
-                  />
-                </Button>*/}
-
-
-
               </CardContent>
             </Card>
           ))}
         </div>
       </div>
+
+      {/* PANEL LATERAL (Sheet) */}
+      <Sheet open={!!selectedProject} onOpenChange={() => setSelectedProject(null)}>
+        <SheetContent side="right" className="w-[380px] sm:w-[450px]">
+
+          {selectedProject && (
+            <>
+              <SheetHeader>
+                <SheetTitle>{selectedProject.name}</SheetTitle>
+                <SheetDescription>{selectedProject.description}</SheetDescription>
+              </SheetHeader>
+
+              <div className="mt-6 space-y-4">
+
+                <img
+                  src={selectedProject.image}
+                  alt={selectedProject.name}
+                  className="rounded-lg w-full"
+                />
+
+                <h3 className="font-semibold">Tecnologías</h3>
+                <div className="flex flex-wrap gap-2">
+                  {selectedProject.technologies.map((tech) => (
+                    <Badge key={tech} variant="secondary">{tech}</Badge>
+                  ))}
+                </div>
+
+                <Button
+                  variant="outline"
+                  className="w-full gap-2"
+                  onClick={() => window.open(selectedProject.github, "_blank")}
+                >
+                  <Github className="h-4 w-4" />
+                  {t.projects.viewOnGithub}
+                </Button>
+
+              </div>
+            </>
+          )}
+
+        </SheetContent>
+      </Sheet>
     </section>
   );
 }
