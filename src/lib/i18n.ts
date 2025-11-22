@@ -47,6 +47,15 @@ export const translations = {
       email: 'Email',
       linkedin: 'LinkedIn',
       github: 'GitHub',
+      form: {
+        yourEmail: 'Tu email',
+        subject: 'Asunto',
+        message: 'Mensaje',
+        send: 'Enviar',
+        sending: 'Enviando...',
+        success: '¡Mensaje enviado con éxito!',
+        error: 'Error al enviar el mensaje. Por favor, intenta de nuevo.',
+      },
     },
   },
   en: {
@@ -94,6 +103,15 @@ export const translations = {
       email: 'Email',
       linkedin: 'LinkedIn',
       github: 'GitHub',
+      form: {
+        yourEmail: 'Your email',
+        subject: 'Subject',
+        message: 'Message',
+        send: 'Send',
+        sending: 'Sending...',
+        success: 'Message sent successfully!',
+        error: 'Error sending message. Please try again.',
+      },
     },
   },
 };
