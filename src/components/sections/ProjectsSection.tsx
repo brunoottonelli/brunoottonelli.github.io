@@ -1,7 +1,7 @@
 
 'use client';
 
-import { ExternalLink, Github } from 'lucide-react';
+import { ArrowRight, ExternalLink, Github } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -133,45 +133,45 @@ export function ProjectsSection() {
                   ))}
                 </div>
                 <div className="flex flex-col gap-2">
-                {/* GitHub button */}
-                <Button
-                  variant="outline"
-                  className="
-                    cursor-pointer
-                    w-full gap-2 group/button
-                    hover:!border-primary
-                    hover:text-primary
-                    hover:!bg-primary/5
-                    dark:hover:!bg-primary/10
-                    transition-colors
-                  "
-                  onClick={() => window.open(project.github, '_blank')}
-                >
-                  <Github className="h-4 w-4 transition-colors group-hover/button:text-primary" />
-                  <span className="transition-colors group-hover/button:text-primary">
-                    {t.projects.viewOnGithub}
-                  </span>
-                </Button>
+                  {/* GitHub button */}
+                  <Button
+                    variant="outline"
+                    className="
+                      cursor-pointer
+                      w-full gap-2 group/button
+                      hover:!border-primary
+                      hover:text-primary
+                      hover:!bg-primary/5
+                      dark:hover:!bg-primary/10
+                      transition-colors
+                    "
+                    onClick={() => window.open(project.github, '_blank')}
+                  >
+                    <Github className="h-4 w-4 transition-colors group-hover/button:text-primary" />
+                    <span className="transition-colors group-hover/button:text-primary">
+                      {t.projects.viewOnGithub}
+                    </span>
+                  </Button>
 
-                {/* Show more button */}
-                <Button
-                  variant="outline"
-                  className="
-                    cursor-pointer
-                    w-full gap-2 group/button
-                    hover:!border-primary
-                    hover:text-primary
-                    hover:!bg-primary/5
-                    dark:hover:!bg-primary/10
-                    transition-colors
-                  "
-                  onClick={() => console.log('Show more clicked:', project.name)}
-                >
-                  {/* Podés agregar icono si querés: <ExternalLink ... /> */}
-                  <span className="transition-colors group-hover/button:text-primary">
-                    {t.projects.showMore}
-                  </span>
-                </Button>
+                  {/* Show more button */}
+                  <Button
+                    variant="outline"
+                    className="
+                      cursor-pointer
+                      w-full gap-2 group/button
+                      hover:!border-primary
+                      hover:text-primary
+                      hover:!bg-primary/5
+                      dark:hover:!bg-primary/10
+                      transition-colors
+                    "
+                    onClick={() => console.log('Show more clicked:', project.name)}
+                  >
+                    <ArrowRight className="h-4 w-4 transition-colors group-hover/button:text-primary" />                  
+                    <span className="transition-colors group-hover/button:text-primary">
+                      {t.projects.showMore}
+                    </span>
+                  </Button>
                 </div>
 
                 {/*<Button
