@@ -11,7 +11,7 @@ export function Footer() {
           <p className="flex items-center justify-center gap-2">
             Made with <Heart className="h-4 w-4 text-red-500 fill-red-500" /> by Bruno Ottonelli
           </p>
-          <p className="mt-2">© {new Date().getFullYear()} All rights reserved.</p>
+          {/*<p className="mt-2">© {new Date().getFullYear()} All rights reserved.</p>*/}
         </div>
       </div>
     </footer>

@@ -6,10 +6,12 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from '@/lib/i18n';
+import { useTheme } from 'next-themes';
 
 export function HeroSection() {
   const { language } = useLanguage();
   const t = useTranslation(language);
+  const { theme } = useTheme();
 
   const handleDownloadCV = () => {
     const cvUrl = language === 'es' ? '/documents/cv-bruno-ottonelli-es.pdf' : '/documents/cv-bruno-ottonelli-en.pdf';
@@ -22,6 +24,14 @@ export function HeroSection() {
       aboutSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  // 📸 Elegir foto según light/dark
+  const photoSrc =
+    theme === 'dark'
+      ? '/images/profile.webp'       // Modo oscuro
+      : '/images/profile-day.png';   // Modo claro
+
+  //si no quiero que la foto cambie segun dia y noche, borrar la parte de theme===dark y poner el src directo
 
   return (
     <section id="home" className="min-h-screen flex items-center pt-16 relative">
@@ -93,7 +103,7 @@ export function HeroSection() {
 
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-3xl overflow-hidden border-4 border-border shadow-2xl">
                 <img
-                  src="/images/profile.webp"
+                  src={photoSrc}
                   alt="Bruno Ottonelli"
                   className="w-full h-full object-cover"
                 />

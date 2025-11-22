@@ -1390,12 +1390,6 @@
   }
 
   @media (hover: hover) {
-    .group-hover\:text-primary:is(:where(.group):hover *) {
-      color: var(--primary);
-    }
-  }
-
-  @media (hover: hover) {
     .group-hover\:opacity-100:is(:where(.group):hover *) {
       opacity: 1;
     }
@@ -1501,18 +1495,6 @@
   }
 
   @media (hover: hover) {
-    .hover\:\!bg-primary\/10:hover {
-      background-color: var(--primary) !important;
-    }
-
-    @supports (color: color-mix(in lab, red, red)) {
-      .hover\:\!bg-primary\/10:hover {
-        background-color: color-mix(in oklab, var(--primary) 10%, transparent) !important;
-      }
-    }
-  }
-
-  @media (hover: hover) {
     .hover\:bg-accent:hover {
       background-color: var(--accent);
     }
@@ -1575,12 +1557,6 @@
       .hover\:bg-primary\/90:hover {
         background-color: color-mix(in oklab, var(--primary) 90%, transparent);
       }
-    }
-  }
-
-  @media (hover: hover) {
-    .hover\:bg-primary\/100:hover {
-      background-color: var(--primary);
     }
   }
 
@@ -2034,18 +2010,6 @@
     @supports (color: color-mix(in lab, red, red)) {
       .dark\:hover\:\!bg-primary\/10:is(.dark *):hover {
         background-color: color-mix(in oklab, var(--primary) 10%, transparent) !important;
-      }
-    }
-  }
-
-  @media (hover: hover) {
-    .dark\:hover\:\!bg-primary\/20:is(.dark *):hover {
-      background-color: var(--primary) !important;
-    }
-
-    @supports (color: color-mix(in lab, red, red)) {
-      .dark\:hover\:\!bg-primary\/20:is(.dark *):hover {
-        background-color: color-mix(in oklab, var(--primary) 20%, transparent) !important;
       }
     }
   }
