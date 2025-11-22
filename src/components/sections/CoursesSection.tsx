@@ -105,38 +105,46 @@ export function CoursesSection() {
           {courses.map((course, index) => (
             <Card
               key={index}
-              className="border-2 hover:shadow-lg transition-all duration-300"
+              className="border-2 hover:shadow-lg transition-all duration-300 cursor-pointer"  
+              onClick={() => setExpandedIndex(expandedIndex === index ? null : index)} 
             >
-              <CardHeader>
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex items-start gap-3 flex-1">
-                    <Award className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                    <div className="flex-1 min-w-0">
-                      <CardTitle className="text-lg mb-1">{course.name}</CardTitle>
-                      <p className="text-sm text-muted-foreground">
-                        {course.institution} • {course.date}
-                      </p>
-                    </div>
+            <CardHeader>
+              <div className="flex items-start justify-between gap-4">
+                <div className="flex items-start gap-3 flex-1">
+                  <Award className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                  <div className="flex-1 min-w-0">
+                    <CardTitle className="text-lg mb-1">{course.name}</CardTitle>
+                    <p className="text-sm text-muted-foreground">
+                      {course.institution} • {course.date}
+                    </p>
                   </div>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}
-                  >
-                    {expandedIndex === index ? (
-                      <ChevronUp className="h-4 w-4" />
-                    ) : (
-                      <ChevronDown className="h-4 w-4" />
-                    )}
-                  </Button>
                 </div>
-              </CardHeader>
-              {expandedIndex === index && (
-                <CardContent className="pt-0">
-                  <p className="text-muted-foreground">{course.description}</p>
-                </CardContent>
-              )}
-            </Card>
+          
+                {/* Botón actualizado */}
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={(e) => {
+                    e.stopPropagation();  
+                    setExpandedIndex(expandedIndex === index ? null : index);
+                  }}
+                >
+                  {expandedIndex === index ? (
+                    <ChevronUp className="h-4 w-4" />
+                  ) : (
+                    <ChevronDown className="h-4 w-4" />
+                  )}
+                </Button>
+              </div>
+            </CardHeader>
+          
+            {expandedIndex === index && (
+              <CardContent className="pt-0">
+                <p className="text-muted-foreground">{course.description}</p>
+              </CardContent>
+            )}
+          </Card>
+          
           ))}
         </div>
       </div>
