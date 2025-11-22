@@ -104,7 +104,7 @@ export function ContactSection() {
               >
                 <CardContent className="p-6 flex flex-col items-center gap-3">
                   <method.icon
-                    className={`h-8 w-8 ${method.color} group-hover:scale-110 transition-transform group-hover:text-primary`}
+                    className={`h-8 w-8 ${method.color} group-hover:scale-110 transition-transform group-hover:!text-primary`}
                   />
                   <div className="text-center">
                     <p className="font-semibold text-sm mb-1 text-foreground">

@@ -1488,6 +1488,12 @@
   }
 
   @media (hover: hover) {
+    .group-hover\:\!text-primary:is(:where(.group):hover *) {
+      color: var(--primary) !important;
+    }
+  }
+
+  @media (hover: hover) {
     .group-hover\:text-primary:is(:where(.group):hover *) {
       color: var(--primary);
     }
