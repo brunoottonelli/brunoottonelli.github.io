@@ -132,7 +132,7 @@ export function ProjectsSection() {
                     </Badge>
                   ))}
                 </div>
-                
+                <div className="flex flex-col gap-2">
                 {/* GitHub button */}
                 <Button
                   variant="outline"
@@ -153,7 +153,7 @@ export function ProjectsSection() {
                   </span>
                 </Button>
 
-                {/* Show more button — EXACTAMENTE igual */}
+                {/* Show more button */}
                 <Button
                   variant="outline"
                   className="
@@ -172,7 +172,7 @@ export function ProjectsSection() {
                     {t.projects.showMore}
                   </span>
                 </Button>
-
+                </div>
 
                 {/*<Button
                   variant="outline"
