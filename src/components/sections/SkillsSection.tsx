@@ -61,7 +61,7 @@ export function SkillsSection() {
                 {category.skills.map((skill) => (
                   <Card
                     key={skill.name}
-                    className="group hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer border-2"
+                    className="group hover:shadow-lg hover:scale-105 transition-all duration-300 /*cursor-pointer*/ border-2"
                   >
                     <CardContent className="p-6 flex flex-col items-center justify-center gap-3">
                       <span className="text-4xl group-hover:scale-110 transition-transform">

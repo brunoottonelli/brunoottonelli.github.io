@@ -44,7 +44,7 @@ export function HeroSection() {
             </div>
 
             <div className="flex flex-wrap items-center gap-4">
-              <Button onClick={handleDownloadCV} size="lg" className="gap-2">
+              <Button onClick={handleDownloadCV} size="lg" className="gap-2 cursor-pointer">
                 <Download className="h-4 w-4" />
                 {t.hero.downloadCV}
               </Button>
@@ -58,7 +58,7 @@ export function HeroSection() {
               <Button
                 variant="outline"
                 size="icon"
-                className="rounded-full hover:text-primary transition-colors"
+                className="rounded-full hover:text-primary transition-colors cursor-pointer"
                 onClick={() => window.open('https://linkedin.com/in/bruno-ottonelli', '_blank')}
               >
                 <Linkedin className="h-5 w-5" />
@@ -66,7 +66,7 @@ export function HeroSection() {
               <Button
                 variant="outline"
                 size="icon"
-                className="rounded-full hover:text-primary transition-colors"
+                className="rounded-full hover:text-primary transition-colors cursor-pointer"
                 onClick={() => window.open('https://github.com/brunoottonelli', '_blank')}
               >
                 <Github className="h-5 w-5" />
@@ -74,7 +74,7 @@ export function HeroSection() {
               <Button
                 variant="outline"
                 size="icon"
-                className="rounded-full hover:text-primary transition-colors"
+                className="rounded-full hover:text-primary transition-colors cursor-pointer"
                 onClick={() => window.location.href = 'mailto:bruno.ottonelli@example.com'}
               >
                 <Mail className="h-5 w-5" />

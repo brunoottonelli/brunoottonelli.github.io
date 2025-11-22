@@ -167,7 +167,7 @@ export function ContactSection() {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full gap-2"
+                  className="w-full gap-2 cursor-pointer"
                   disabled={isSubmitting}
                 >
                   <Send className="h-4 w-4" />

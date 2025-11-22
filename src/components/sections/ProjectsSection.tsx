@@ -135,12 +135,71 @@ export function ProjectsSection() {
                 
                 <Button
                   variant="outline"
-                  className="w-full gap-2"
+                  className="
+                    cursor-pointer
+                    w-full gap-2 group/button
+                    hover:!border-primary
+                    hover:text-primary
+
+                    hover:!bg-primary/5         /* <-- Light mode (más fuerte) */
+                    dark:hover:!bg-primary/10    /* <-- Dark mode (distinto valor) */
+
+                    transition-colors
+                  "
                   onClick={() => window.open(project.github, '_blank')}
                 >
-                  <Github className="h-4 w-4" />
-                  {t.projects.viewOnGithub}
+                  <Github className="h-4 w-4 transition-colors group-hover/button:text-primary" />
+                  <span className="transition-colors group-hover/button:text-primary">
+                    {t.projects.viewOnGithub}
+                  </span>
                 </Button>
+
+                {/*<Button
+                  variant="outline"
+                  onClick={() => window.open(project.github, "_blank")}
+                  className="
+                    w-full gap-2 
+                    group/button 
+                    border-border 
+                    hover:border-primary 
+                    hover:bg-primary/10 
+                    transition-all 
+                    duration-300 
+                    rounded-xl
+                  "
+                >
+                  <Github
+                    className="
+                      h-4 w-4 
+                      transition-transform 
+                      duration-300
+                      group-hover/button:translate-x-1 
+                      group-hover/button:text-primary
+                    "
+                  />
+
+                  <span
+                    className="
+                      transition-colors 
+                      duration-300
+                      group-hover/button:text-primary
+                    "
+                  >
+                    {t.projects.viewOnGithub}
+                  </span>
+
+                  <ExternalLink
+                    className="
+                      ml-auto h-4 w-4 opacity-0 
+                      transition-all duration-300 
+                      group-hover/button:opacity-100 
+                      group-hover/button:translate-x-1
+                    "
+                  />
+                </Button>*/}
+
+
+
               </CardContent>
             </Card>
           ))}
