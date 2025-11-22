@@ -12,7 +12,9 @@ export const translations = {
       contact: 'Contacto',
     },
     hero: {
-      greeting: '¡Hola! Soy Bruno 👋',
+      greeting1: '¡Hola! ',
+      name: 'Soy Bruno',
+      greeting2: ' 👋',
       title: 'Estudiante avanzado de Ingeniería en Sistemas de Comunicación con perfil enfocado en Machine Learning y Señales',
       description: 'Me especializo en aprendizaje automático, comunicaciones digitales y procesamiento de señales. Soy curioso, autodidacta y siempre estoy aprendiendo algo nuevo.',
       downloadCV: 'Descargar CV',
@@ -68,7 +70,9 @@ export const translations = {
       contact: 'Contact',
     },
     hero: {
-      greeting: "Hi! I'm Bruno 👋",
+      greeting1: "Hi! ",
+      name: 'I\'m Bruno',
+      greeting2: ' 👋',
       title: 'Telecommunications Engineer focused on Machine Learning and Signals',
       description: 'I specialize in machine learning, digital communications, and signal processing. I am curious, self-taught, and always learning something new.',
       downloadCV: 'Download CV',

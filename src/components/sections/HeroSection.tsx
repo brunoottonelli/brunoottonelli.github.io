@@ -31,7 +31,9 @@ export function HeroSection() {
           <div className="space-y-6 order-2 lg:order-1">
             <div className="space-y-4">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-                {t.hero.greeting}
+              <span className="text-primary">{t.hero.greeting1}</span>
+                {t.hero.name}
+                {t.hero.greeting2}
               </h1>
               <h2 className="text-xl sm:text-2xl text-muted-foreground font-medium">
                 {t.hero.title}
