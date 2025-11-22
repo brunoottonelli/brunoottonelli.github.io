@@ -1599,6 +1599,18 @@
   }
 
   @media (hover: hover) {
+    .hover\:\!bg-primary\/10:hover {
+      background-color: var(--primary) !important;
+    }
+
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:\!bg-primary\/10:hover {
+        background-color: color-mix(in oklab, var(--primary) 10%, transparent) !important;
+      }
+    }
+  }
+
+  @media (hover: hover) {
     .hover\:bg-accent:hover {
       background-color: var(--accent);
     }
@@ -2114,6 +2126,18 @@
     @supports (color: color-mix(in lab, red, red)) {
       .dark\:hover\:\!bg-primary\/10:is(.dark *):hover {
         background-color: color-mix(in oklab, var(--primary) 10%, transparent) !important;
+      }
+    }
+  }
+
+  @media (hover: hover) {
+    .dark\:hover\:\!bg-primary\/20:is(.dark *):hover {
+      background-color: var(--primary) !important;
+    }
+
+    @supports (color: color-mix(in lab, red, red)) {
+      .dark\:hover\:\!bg-primary\/20:is(.dark *):hover {
+        background-color: color-mix(in oklab, var(--primary) 20%, transparent) !important;
       }
     }
   }

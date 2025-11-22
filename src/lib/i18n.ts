@@ -42,6 +42,7 @@ export const translations = {
       subtitle: 'Aún no tengo mucha experiencia profesional como desarrollador 😅 pero mis proyectos académicos también muestran lo que puedo hacer.',
       technologies: 'Tecnologías',
       viewOnGithub: 'Ver en GitHub',
+      showMore: 'Ver más',
     },
     contact: {
       title: '¿Trabajamos juntos?',
@@ -100,6 +101,7 @@ export const translations = {
       subtitle: "I don't have professional experience yet 😅 but these academic projects show what I can do.",
       technologies: 'Technologies',
       viewOnGithub: 'View on GitHub',
+      showMore: 'Show more',
     },
     contact: {
       title: "Let's Work Together?",

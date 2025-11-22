@@ -133,6 +133,7 @@ export function ProjectsSection() {
                   ))}
                 </div>
                 
+                {/* GitHub button */}
                 <Button
                   variant="outline"
                   className="
@@ -140,10 +141,8 @@ export function ProjectsSection() {
                     w-full gap-2 group/button
                     hover:!border-primary
                     hover:text-primary
-
-                    hover:!bg-primary/5         /* <-- Light mode (más fuerte) */
-                    dark:hover:!bg-primary/10    /* <-- Dark mode (distinto valor) */
-
+                    hover:!bg-primary/5
+                    dark:hover:!bg-primary/10
                     transition-colors
                   "
                   onClick={() => window.open(project.github, '_blank')}
@@ -153,6 +152,27 @@ export function ProjectsSection() {
                     {t.projects.viewOnGithub}
                   </span>
                 </Button>
+
+                {/* Show more button — EXACTAMENTE igual */}
+                <Button
+                  variant="outline"
+                  className="
+                    cursor-pointer
+                    w-full gap-2 group/button
+                    hover:!border-primary
+                    hover:text-primary
+                    hover:!bg-primary/5
+                    dark:hover:!bg-primary/10
+                    transition-colors
+                  "
+                  onClick={() => console.log('Show more clicked:', project.name)}
+                >
+                  {/* Podés agregar icono si querés: <ExternalLink ... /> */}
+                  <span className="transition-colors group-hover/button:text-primary">
+                    {t.projects.showMore}
+                  </span>
+                </Button>
+
 
                 {/*<Button
                   variant="outline"
