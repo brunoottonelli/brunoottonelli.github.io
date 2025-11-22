@@ -1233,10 +1233,17 @@ function HeroSection() {
                                 className: "relative",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$4_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl blur-3xl"
+                                        className: "absolute inset-0 bg-primary/10 rounded-3xl blur-xl"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/sections/HeroSection.tsx",
-                                        lineNumber: 88,
+                                        lineNumber: 89,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$4_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "absolute inset-0 bg-gradient-to-br from-primary/25 to-primary/20 rounded-3xl transform rotate-3 scale-100 shadow-xl"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/sections/HeroSection.tsx",
+                                        lineNumber: 92,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$4_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1247,12 +1254,12 @@ function HeroSection() {
                                             className: "w-full h-full object-cover"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/sections/HeroSection.tsx",
-                                            lineNumber: 90,
+                                            lineNumber: 95,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/sections/HeroSection.tsx",
-                                        lineNumber: 89,
+                                        lineNumber: 94,
                                         columnNumber: 15
                                     }, this)
                                 ]
@@ -1287,7 +1294,7 @@ function HeroSection() {
                         children: language === 'es' ? 'Más sobre mi' : 'More about me'
                     }, void 0, false, {
                         fileName: "[project]/src/components/sections/HeroSection.tsx",
-                        lineNumber: 107,
+                        lineNumber: 112,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$4_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1296,18 +1303,18 @@ function HeroSection() {
                             className: "h-5 w-5"
                         }, void 0, false, {
                             fileName: "[project]/src/components/sections/HeroSection.tsx",
-                            lineNumber: 111,
+                            lineNumber: 116,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/sections/HeroSection.tsx",
-                        lineNumber: 110,
+                        lineNumber: 115,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/sections/HeroSection.tsx",
-                lineNumber: 102,
+                lineNumber: 107,
                 columnNumber: 7
             }, this)
         ]
@@ -1382,10 +1389,17 @@ function AboutSection() {
                                     className: "relative",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$4_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl blur-2xl"
+                                            className: "absolute inset-0 bg-primary/10 rounded-3xl blur-xl"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/sections/AboutSection.tsx",
-                                            lineNumber: 23,
+                                            lineNumber: 25,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$4_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "absolute inset-0 bg-gradient-to-br from-primary/30 to-primary/10 rounded-3xl transform rotate-3 scale-100 shadow-xl"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/sections/AboutSection.tsx",
+                                            lineNumber: 27,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$4_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1396,23 +1410,23 @@ function AboutSection() {
                                                 className: "w-full h-full object-cover"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/sections/AboutSection.tsx",
-                                                lineNumber: 25,
+                                                lineNumber: 30,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/sections/AboutSection.tsx",
-                                            lineNumber: 24,
+                                            lineNumber: 29,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/sections/AboutSection.tsx",
-                                    lineNumber: 22,
+                                    lineNumber: 23,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/sections/AboutSection.tsx",
-                                lineNumber: 21,
+                                lineNumber: 22,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$4_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1426,7 +1440,7 @@ function AboutSection() {
                                                 children: t.about.description
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/sections/AboutSection.tsx",
-                                                lineNumber: 37,
+                                                lineNumber: 42,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$4_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1437,7 +1451,7 @@ function AboutSection() {
                                                         children: t.about.university
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/sections/AboutSection.tsx",
-                                                        lineNumber: 41,
+                                                        lineNumber: 46,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$4_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1445,19 +1459,19 @@ function AboutSection() {
                                                         children: language === 'es' ? 'Facultad de Ingeniería - Universidad de la República' : 'Faculty of Engineering - University of the Republic'
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/sections/AboutSection.tsx",
-                                                        lineNumber: 44,
+                                                        lineNumber: 49,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/sections/AboutSection.tsx",
-                                                lineNumber: 40,
+                                                lineNumber: 45,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/sections/AboutSection.tsx",
-                                        lineNumber: 36,
+                                        lineNumber: 41,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$4_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1471,7 +1485,7 @@ function AboutSection() {
                                                         children: "ML & AI"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/sections/AboutSection.tsx",
-                                                        lineNumber: 55,
+                                                        lineNumber: 60,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$4_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1479,13 +1493,13 @@ function AboutSection() {
                                                         children: language === 'es' ? 'Especialización' : 'Specialization'
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/sections/AboutSection.tsx",
-                                                        lineNumber: 56,
+                                                        lineNumber: 61,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/sections/AboutSection.tsx",
-                                                lineNumber: 54,
+                                                lineNumber: 59,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$4_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1496,7 +1510,7 @@ function AboutSection() {
                                                         children: "GNNs"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/sections/AboutSection.tsx",
-                                                        lineNumber: 61,
+                                                        lineNumber: 66,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$4_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1504,25 +1518,25 @@ function AboutSection() {
                                                         children: language === 'es' ? 'Redes Neuronales' : 'Neural Networks'
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/sections/AboutSection.tsx",
-                                                        lineNumber: 62,
+                                                        lineNumber: 67,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/sections/AboutSection.tsx",
-                                                lineNumber: 60,
+                                                lineNumber: 65,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/sections/AboutSection.tsx",
-                                        lineNumber: 53,
+                                        lineNumber: 58,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/sections/AboutSection.tsx",
-                                lineNumber: 35,
+                                lineNumber: 40,
                                 columnNumber: 13
                             }, this)
                         ]

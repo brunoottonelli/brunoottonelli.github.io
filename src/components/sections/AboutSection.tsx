@@ -17,10 +17,15 @@ export function AboutSection() {
 
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
+
             {/* Left: Photo */}
             <div className="flex justify-center lg:justify-start">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl blur-2xl"></div>
+                {/* Glow difuso detrás */}
+                <div className="absolute inset-0 bg-primary/10 rounded-3xl blur-xl"></div>
+                {/* Cuadro inclinado detrás */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-primary/10 rounded-3xl transform rotate-3 scale-100 shadow-xl"></div>
+                {/* Foto */}
                 <div className="relative w-80 h-64 sm:w-96 sm:h-80 lg:w-[500px] lg:h-96 rounded-3xl overflow-hidden border-4 border-border shadow-2xl">
                   <img
                     src="/images/Facultad_de_Ingeniería_(Uruguay).jpg"

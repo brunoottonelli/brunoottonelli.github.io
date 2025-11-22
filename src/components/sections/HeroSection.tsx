@@ -85,7 +85,12 @@ export function HeroSection() {
           {/* Right: Photo */}
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl blur-3xl"></div>
+              {/* Glow difuso detrás */}
+              <div className="absolute inset-0 bg-primary/10 rounded-3xl blur-xl"></div>
+
+              {/* Cuadro inclinado detrás de la foto */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/25 to-primary/20 rounded-3xl transform rotate-3 scale-100 shadow-xl"></div>
+
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-3xl overflow-hidden border-4 border-border shadow-2xl">
                 <img
                   src="/images/profile.webp"
