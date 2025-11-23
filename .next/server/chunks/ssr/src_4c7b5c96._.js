@@ -1874,6 +1874,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$ne
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$454$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.1.0/node_modules/lucide-react/dist/esm/icons/chevron-down.js [app-ssr] (ecmascript) <export default as ChevronDown>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$454$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$up$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronUp$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.1.0/node_modules/lucide-react/dist/esm/icons/chevron-up.js [app-ssr] (ecmascript) <export default as ChevronUp>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$454$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$award$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Award$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.1.0/node_modules/lucide-react/dist/esm/icons/award.js [app-ssr] (ecmascript) <export default as Award>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$454$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$external$2d$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ExternalLink$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.1.0/node_modules/lucide-react/dist/esm/icons/external-link.js [app-ssr] (ecmascript) <export default as ExternalLink>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/card.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/button.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$contexts$2f$LanguageContext$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/contexts/LanguageContext.tsx [app-ssr] (ecmascript)");
@@ -1892,43 +1893,57 @@ const coursesData = {
             name: 'Neural Networks and Deep Learning',
             institution: 'Coursera / Deep Learning Specialization',
             date: '2023',
-            description: 'Curso 1 de la especialización en Deep Learning: fundamentos de redes neuronales y aprendizaje profundo.'
+            description: 'Curso 1 de la especialización en Deep Learning: fundamentos de redes neuronales y aprendizaje profundo.',
+            certificateUrl: '/documents/neural-networks-certificate.pdf',
+            thumbnail: '/documents/neural-networks-thumbnail.jpg'
         },
         {
             name: 'Git y GitHub',
             institution: 'Mouradev.pro',
             date: '2025',
-            description: 'Control de versiones con Git y colaboración en GitHub, instructora: Bruno Ottonelli.'
+            description: 'Control de versiones con Git y colaboración en GitHub, instructora: Bruno Ottonelli.',
+            certificateUrl: '/documents/git-github-certificate.pdf',
+            thumbnail: '/documents/git-github-thumbnail.jpg'
         },
         {
             name: 'Power BI',
             institution: 'EMPOWERDATA LATAM',
             date: '2024',
-            description: 'Análisis y visualización de datos con Microsoft Power BI.'
+            description: 'Análisis y visualización de datos con Microsoft Power BI.',
+            certificateUrl: '/documents/powerbi-certificate.pdf',
+            thumbnail: '/documents/powerbi-thumbnail.jpg'
         },
         {
             name: 'Pandas',
             institution: 'Kaggle',
             date: '2024',
-            description: 'Manipulación y análisis de datos con la librería Pandas de Python.'
+            description: 'Manipulación y análisis de datos con la librería Pandas de Python.',
+            certificateUrl: '/documents/pandas-certificate.pdf',
+            thumbnail: '/documents/pandas-thumbnail.jpg'
         },
         {
             name: 'Inglés PET',
             institution: 'Cambridge',
             date: '2023',
-            description: 'Preliminary English Test - Certificación de nivel intermedio de inglés.'
+            description: 'Preliminary English Test - Certificación de nivel intermedio de inglés.',
+            certificateUrl: '/documents/pet-certificate.pdf',
+            thumbnail: '/documents/pet-thumbnail.jpg'
         },
         {
             name: 'Productividad Personal',
             institution: 'Google Activate',
             date: '2024',
-            description: 'Técnicas y herramientas para mejorar la productividad personal y profesional.'
+            description: 'Técnicas y herramientas para mejorar la productividad personal y profesional.',
+            certificateUrl: '/documents/productivity-certificate.pdf',
+            thumbnail: '/documents/productivity-thumbnail.jpg'
         },
         {
             name: 'Asistente Comercial',
             institution: 'Forge',
             date: '2023',
-            description: 'Formación en técnicas de ventas, atención al cliente y gestión comercial.'
+            description: 'Formación en técnicas de ventas, atención al cliente y gestión comercial.',
+            certificateUrl: '/documents/sales-assistant-certificate.pdf',
+            thumbnail: '/documents/sales-assistant-thumbnail.jpg'
         }
     ],
     en: [
@@ -1936,43 +1951,57 @@ const coursesData = {
             name: 'Neural Networks and Deep Learning',
             institution: 'Coursera / Deep Learning Specialization',
             date: '2023',
-            description: 'Course 1 of Deep Learning Specialization: fundamentals of neural networks and deep learning.'
+            description: 'Course 1 of Deep Learning Specialization: fundamentals of neural networks and deep learning.',
+            certificateUrl: '/documents/neural-networks-certificate.pdf',
+            thumbnail: '/documents/neural-networks-thumbnail.jpg'
         },
         {
             name: 'Git & GitHub',
             institution: 'Mouradev.pro',
             date: '2025',
-            description: 'Version control with Git and collaboration on GitHub, instructor: Bruno Ottonelli.'
+            description: 'Version control with Git and collaboration on GitHub, instructor: Bruno Ottonelli.',
+            certificateUrl: '/documents/git-github-certificate.pdf',
+            thumbnail: '/documents/git-github-thumbnail.jpg'
         },
         {
             name: 'Power BI',
             institution: 'EMPOWERDATA LATAM',
             date: '2024',
-            description: 'Data analysis and visualization with Microsoft Power BI.'
+            description: 'Data analysis and visualization with Microsoft Power BI.',
+            certificateUrl: '/documents/powerbi-certificate.pdf',
+            thumbnail: '/documents/powerbi-thumbnail.jpg'
         },
         {
             name: 'Pandas',
             institution: 'Kaggle',
             date: '2024',
-            description: 'Data manipulation and analysis with Python Pandas library.'
+            description: 'Data manipulation and analysis with Python Pandas library.',
+            certificateUrl: '/documents/pandas-certificate.pdf',
+            thumbnail: '/documents/pandas-thumbnail.jpg'
         },
         {
             name: 'English PET',
             institution: 'Cambridge',
             date: '2023',
-            description: 'Preliminary English Test - Intermediate level English certification.'
+            description: 'Preliminary English Test - Intermediate level English certification.',
+            certificateUrl: '/documents/pet-certificate.pdf',
+            thumbnail: '/documents/pet-thumbnail.jpg'
         },
         {
             name: 'Personal Productivity',
             institution: 'Google Activate',
             date: '2024',
-            description: 'Techniques and tools to improve personal and professional productivity.'
+            description: 'Techniques and tools to improve personal and professional productivity.',
+            certificateUrl: '/documents/productivity-certificate.pdf',
+            thumbnail: '/documents/productivity-thumbnail.jpg'
         },
         {
             name: 'Sales Assistant',
             institution: 'Forge',
             date: '2023',
-            description: 'Training in sales techniques, customer service, and commercial management.'
+            description: 'Training in sales techniques, customer service, and commercial management.',
+            certificateUrl: '/documents/sales-assistant-certificate.pdf',
+            thumbnail: '/documents/sales-assistant-thumbnail.jpg'
         }
     ]
 };
@@ -1994,12 +2023,12 @@ function CoursesSection() {
                         children: t.courses.title
                     }, void 0, false, {
                         fileName: "[project]/src/components/sections/CoursesSection.tsx",
-                        lineNumber: 113,
+                        lineNumber: 140,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/sections/CoursesSection.tsx",
-                    lineNumber: 112,
+                    lineNumber: 139,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$4_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2019,8 +2048,8 @@ function CoursesSection() {
                                                         className: "h-6 w-6 text-primary flex-shrink-0 mt-1"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/sections/CoursesSection.tsx",
-                                                        lineNumber: 126,
-                                                        columnNumber: 19
+                                                        lineNumber: 153,
+                                                        columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$4_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "flex-1 min-w-0",
@@ -2030,8 +2059,8 @@ function CoursesSection() {
                                                                 children: course.name
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/sections/CoursesSection.tsx",
-                                                                lineNumber: 128,
-                                                                columnNumber: 21
+                                                                lineNumber: 155,
+                                                                columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$4_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                 className: "text-sm text-muted-foreground",
@@ -2042,20 +2071,20 @@ function CoursesSection() {
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/components/sections/CoursesSection.tsx",
-                                                                lineNumber: 129,
-                                                                columnNumber: 21
+                                                                lineNumber: 156,
+                                                                columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/sections/CoursesSection.tsx",
-                                                        lineNumber: 127,
-                                                        columnNumber: 19
+                                                        lineNumber: 154,
+                                                        columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/sections/CoursesSection.tsx",
-                                                lineNumber: 125,
-                                                columnNumber: 17
+                                                lineNumber: 152,
+                                                columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$4_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
                                                 variant: "ghost",
@@ -2068,66 +2097,128 @@ function CoursesSection() {
                                                     className: "h-4 w-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/sections/CoursesSection.tsx",
-                                                    lineNumber: 145,
-                                                    columnNumber: 21
+                                                    lineNumber: 171,
+                                                    columnNumber: 23
                                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$4_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$454$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__["ChevronDown"], {
                                                     className: "h-4 w-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/sections/CoursesSection.tsx",
-                                                    lineNumber: 147,
-                                                    columnNumber: 21
+                                                    lineNumber: 173,
+                                                    columnNumber: 23
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/sections/CoursesSection.tsx",
-                                                lineNumber: 136,
-                                                columnNumber: 17
+                                                lineNumber: 162,
+                                                columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/sections/CoursesSection.tsx",
-                                        lineNumber: 124,
-                                        columnNumber: 15
-                                    }, this)
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/sections/CoursesSection.tsx",
-                                    lineNumber: 123,
-                                    columnNumber: 13
-                                }, this),
-                                expandedIndex === index && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$4_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardContent"], {
-                                    className: "pt-0",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$4_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-muted-foreground",
-                                        children: course.description
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/sections/CoursesSection.tsx",
-                                        lineNumber: 155,
+                                        lineNumber: 151,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/sections/CoursesSection.tsx",
-                                    lineNumber: 154,
+                                    lineNumber: 150,
                                     columnNumber: 15
+                                }, this),
+                                expandedIndex === index && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$4_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardContent"], {
+                                    className: "pt-0",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$4_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex gap-6 items-start",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$4_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "text-muted-foreground flex-1",
+                                                children: course.description
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/sections/CoursesSection.tsx",
+                                                lineNumber: 183,
+                                                columnNumber: 21
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$4_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                href: course.certificateUrl,
+                                                target: "_blank",
+                                                rel: "noopener noreferrer",
+                                                className: "relative group flex-shrink-0 w-48 aspect-[3/2] rounded-lg overflow-hidden border-2 border-border hover:border-primary transition-all duration-300",
+                                                onClick: (e)=>e.stopPropagation(),
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$4_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                                        src: course.thumbnail,
+                                                        alt: `Certificado de ${course.name}`,
+                                                        className: "w-full h-full object-cover"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/components/sections/CoursesSection.tsx",
+                                                        lineNumber: 194,
+                                                        columnNumber: 23
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$4_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-all duration-300 flex items-center justify-center",
+                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$4_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center gap-2 text-primary",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$4_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$454$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$external$2d$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ExternalLink$3e$__["ExternalLink"], {
+                                                                    className: "h-6 w-6"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/src/components/sections/CoursesSection.tsx",
+                                                                    lineNumber: 203,
+                                                                    columnNumber: 27
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$4_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    className: "text-xs font-medium",
+                                                                    children: language === 'es' ? 'Ver certificado' : 'View certificate'
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/src/components/sections/CoursesSection.tsx",
+                                                                    lineNumber: 204,
+                                                                    columnNumber: 27
+                                                                }, this)
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/src/components/sections/CoursesSection.tsx",
+                                                            lineNumber: 202,
+                                                            columnNumber: 25
+                                                        }, this)
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/components/sections/CoursesSection.tsx",
+                                                        lineNumber: 201,
+                                                        columnNumber: 23
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/components/sections/CoursesSection.tsx",
+                                                lineNumber: 186,
+                                                columnNumber: 21
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/components/sections/CoursesSection.tsx",
+                                        lineNumber: 181,
+                                        columnNumber: 19
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/sections/CoursesSection.tsx",
+                                    lineNumber: 180,
+                                    columnNumber: 17
                                 }, this)
                             ]
                         }, index, true, {
                             fileName: "[project]/src/components/sections/CoursesSection.tsx",
-                            lineNumber: 118,
+                            lineNumber: 145,
                             columnNumber: 13
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/src/components/sections/CoursesSection.tsx",
-                    lineNumber: 116,
+                    lineNumber: 143,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/sections/CoursesSection.tsx",
-            lineNumber: 111,
+            lineNumber: 138,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/sections/CoursesSection.tsx",
-        lineNumber: 110,
+        lineNumber: 137,
         columnNumber: 5
     }, this);
 }

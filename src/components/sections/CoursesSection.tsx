@@ -1,8 +1,7 @@
-
 'use client';
 
 import { useState } from 'react';
-import { ChevronDown, ChevronUp, Award } from 'lucide-react';
+import { ChevronDown, ChevronUp, Award, ExternalLink } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -15,42 +14,56 @@ const coursesData = {
       institution: 'Coursera / Deep Learning Specialization',
       date: '2023',
       description: 'Curso 1 de la especialización en Deep Learning: fundamentos de redes neuronales y aprendizaje profundo.',
+      certificateUrl: '/documents/neural-networks-certificate.pdf',
+      thumbnail: '/documents/neural-networks-thumbnail.jpg',
     },
     {
       name: 'Git y GitHub',
       institution: 'Mouradev.pro',
       date: '2025',
       description: 'Control de versiones con Git y colaboración en GitHub, instructora: Bruno Ottonelli.',
+      certificateUrl: '/documents/git-github-certificate.pdf',
+      thumbnail: '/documents/git-github-thumbnail.jpg',
     },
     {
       name: 'Power BI',
       institution: 'EMPOWERDATA LATAM',
       date: '2024',
       description: 'Análisis y visualización de datos con Microsoft Power BI.',
+      certificateUrl: '/documents/powerbi-certificate.pdf',
+      thumbnail: '/documents/powerbi-thumbnail.jpg',
     },
     {
       name: 'Pandas',
       institution: 'Kaggle',
       date: '2024',
       description: 'Manipulación y análisis de datos con la librería Pandas de Python.',
+      certificateUrl: '/documents/pandas-certificate.pdf',
+      thumbnail: '/documents/pandas-thumbnail.jpg',
     },
     {
       name: 'Inglés PET',
       institution: 'Cambridge',
       date: '2023',
       description: 'Preliminary English Test - Certificación de nivel intermedio de inglés.',
+      certificateUrl: '/documents/pet-certificate.pdf',
+      thumbnail: '/documents/pet-thumbnail.jpg',
     },
     {
       name: 'Productividad Personal',
       institution: 'Google Activate',
       date: '2024',
       description: 'Técnicas y herramientas para mejorar la productividad personal y profesional.',
+      certificateUrl: '/documents/productivity-certificate.pdf',
+      thumbnail: '/documents/productivity-thumbnail.jpg',
     },
     {
       name: 'Asistente Comercial',
       institution: 'Forge',
       date: '2023',
       description: 'Formación en técnicas de ventas, atención al cliente y gestión comercial.',
+      certificateUrl: '/documents/sales-assistant-certificate.pdf',
+      thumbnail: '/documents/sales-assistant-thumbnail.jpg',
     },
   ],
   en: [
@@ -59,42 +72,56 @@ const coursesData = {
       institution: 'Coursera / Deep Learning Specialization',
       date: '2023',
       description: 'Course 1 of Deep Learning Specialization: fundamentals of neural networks and deep learning.',
+      certificateUrl: '/documents/neural-networks-certificate.pdf',
+      thumbnail: '/documents/neural-networks-thumbnail.jpg',
     },
     {
       name: 'Git & GitHub',
       institution: 'Mouradev.pro',
       date: '2025',
       description: 'Version control with Git and collaboration on GitHub, instructor: Bruno Ottonelli.',
+      certificateUrl: '/documents/git-github-certificate.pdf',
+      thumbnail: '/documents/git-github-thumbnail.jpg',
     },
     {
       name: 'Power BI',
       institution: 'EMPOWERDATA LATAM',
       date: '2024',
       description: 'Data analysis and visualization with Microsoft Power BI.',
+      certificateUrl: '/documents/powerbi-certificate.pdf',
+      thumbnail: '/documents/powerbi-thumbnail.jpg',
     },
     {
       name: 'Pandas',
       institution: 'Kaggle',
       date: '2024',
       description: 'Data manipulation and analysis with Python Pandas library.',
+      certificateUrl: '/documents/pandas-certificate.pdf',
+      thumbnail: '/documents/pandas-thumbnail.jpg',
     },
     {
       name: 'English PET',
       institution: 'Cambridge',
       date: '2023',
       description: 'Preliminary English Test - Intermediate level English certification.',
+      certificateUrl: '/documents/pet-certificate.pdf',
+      thumbnail: '/documents/pet-thumbnail.jpg',
     },
     {
       name: 'Personal Productivity',
       institution: 'Google Activate',
       date: '2024',
       description: 'Techniques and tools to improve personal and professional productivity.',
+      certificateUrl: '/documents/productivity-certificate.pdf',
+      thumbnail: '/documents/productivity-thumbnail.jpg',
     },
     {
       name: 'Sales Assistant',
       institution: 'Forge',
       date: '2023',
       description: 'Training in sales techniques, customer service, and commercial management.',
+      certificateUrl: '/documents/sales-assistant-certificate.pdf',
+      thumbnail: '/documents/sales-assistant-thumbnail.jpg',
     },
   ],
 };
@@ -120,43 +147,70 @@ export function CoursesSection() {
               className="border-2 hover:shadow-lg transition-all duration-300 cursor-pointer"  
               onClick={() => setExpandedIndex(expandedIndex === index ? null : index)} 
             >
-            <CardHeader>
-              <div className="flex items-start justify-between gap-4">
-                <div className="flex items-start gap-3 flex-1">
-                  <Award className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                  <div className="flex-1 min-w-0">
-                    <CardTitle className="text-lg mb-1">{course.name}</CardTitle>
-                    <p className="text-sm text-muted-foreground">
-                      {course.institution} • {course.date}
-                    </p>
+              <CardHeader>
+                <div className="flex items-start justify-between gap-4">
+                  <div className="flex items-start gap-3 flex-1">
+                    <Award className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                    <div className="flex-1 min-w-0">
+                      <CardTitle className="text-lg mb-1">{course.name}</CardTitle>
+                      <p className="text-sm text-muted-foreground">
+                        {course.institution} • {course.date}
+                      </p>
+                    </div>
                   </div>
+            
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={(e) => {
+                      e.stopPropagation();  
+                      setExpandedIndex(expandedIndex === index ? null : index);
+                    }}
+                  >
+                    {expandedIndex === index ? (
+                      <ChevronUp className="h-4 w-4" />
+                    ) : (
+                      <ChevronDown className="h-4 w-4" />
+                    )}
+                  </Button>
                 </div>
-          
-                {/* Botón actualizado */}
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={(e) => {
-                    e.stopPropagation();  
-                    setExpandedIndex(expandedIndex === index ? null : index);
-                  }}
-                >
-                  {expandedIndex === index ? (
-                    <ChevronUp className="h-4 w-4" />
-                  ) : (
-                    <ChevronDown className="h-4 w-4" />
-                  )}
-                </Button>
-              </div>
-            </CardHeader>
-          
-            {expandedIndex === index && (
-              <CardContent className="pt-0">
-                <p className="text-muted-foreground">{course.description}</p>
-              </CardContent>
-            )}
-          </Card>
-          
+              </CardHeader>
+            
+              {expandedIndex === index && (
+                <CardContent className="pt-0">
+                  <div className="flex gap-6 items-start">
+                    {/* Descripción del curso */}
+                    <p className="text-muted-foreground flex-1">{course.description}</p>
+                    
+                    {/* Miniatura del certificado */}
+                    <a
+                      href={course.certificateUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="relative group flex-shrink-0 w-48 aspect-[3/2] rounded-lg overflow-hidden border-2 border-border hover:border-primary transition-all duration-300"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      {/* Imagen del certificado */}
+                      <img
+                        src={course.thumbnail}
+                        alt={`Certificado de ${course.name}`}
+                        className="w-full h-full object-cover"
+                      />
+                      
+                      {/* Overlay con hover effect */}
+                      <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-all duration-300 flex items-center justify-center">
+                        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center gap-2 text-primary">
+                          <ExternalLink className="h-6 w-6" />
+                          <span className="text-xs font-medium">
+                            {language === 'es' ? 'Ver certificado' : 'View certificate'}
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </CardContent>
+              )}
+            </Card>
           ))}
         </div>
       </div>
