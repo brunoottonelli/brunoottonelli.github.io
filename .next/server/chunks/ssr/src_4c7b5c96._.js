@@ -1889,78 +1889,90 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$i18n$2e$ts__$5
 const coursesData = {
     es: [
         {
-            name: 'Machine Learning',
-            institution: 'Coursera / Deeplearning.ai',
+            name: 'Neural Networks and Deep Learning',
+            institution: 'Coursera / Deep Learning Specialization',
             date: '2023',
-            description: 'Curso completo sobre fundamentos de ML, redes neuronales, y deep learning.'
+            description: 'Curso 1 de la especialización en Deep Learning: fundamentos de redes neuronales y aprendizaje profundo.'
         },
         {
-            name: 'Data Quality & Integration',
-            institution: 'FING - UDELAR',
-            date: '2023',
-            description: 'Técnicas avanzadas para integración y calidad de datos en grandes datasets.'
+            name: 'Git y GitHub',
+            institution: 'Mouradev.pro',
+            date: '2025',
+            description: 'Control de versiones con Git y colaboración en GitHub, instructora: Bruno Ottonelli.'
         },
         {
-            name: 'Digital Communications',
-            institution: 'FING - UDELAR',
-            date: '2022',
-            description: 'Sistemas de comunicación digital, modulación, codificación y transmisión.'
-        },
-        {
-            name: 'Graph Neural Networks',
-            institution: 'Udemy',
+            name: 'Power BI',
+            institution: 'EMPOWERDATA LATAM',
             date: '2024',
-            description: 'Introducción a GNNs y sus aplicaciones en redes y grafos.'
+            description: 'Análisis y visualización de datos con Microsoft Power BI.'
         },
         {
-            name: 'Excel VBA Avanzado',
-            institution: 'UTE',
-            date: '2021',
-            description: 'Programación avanzada en VBA para automatización y análisis de datos.'
+            name: 'Pandas',
+            institution: 'Kaggle',
+            date: '2024',
+            description: 'Manipulación y análisis de datos con la librería Pandas de Python.'
         },
         {
-            name: 'Señales y Comunicaciones',
-            institution: 'FING - UDELAR',
-            date: '2022',
-            description: 'Procesamiento de señales, análisis de Fourier y sistemas de comunicación.'
+            name: 'Inglés PET',
+            institution: 'Cambridge',
+            date: '2023',
+            description: 'Preliminary English Test - Certificación de nivel intermedio de inglés.'
+        },
+        {
+            name: 'Productividad Personal',
+            institution: 'Google Activate',
+            date: '2024',
+            description: 'Técnicas y herramientas para mejorar la productividad personal y profesional.'
+        },
+        {
+            name: 'Asistente Comercial',
+            institution: 'Forge',
+            date: '2023',
+            description: 'Formación en técnicas de ventas, atención al cliente y gestión comercial.'
         }
     ],
     en: [
         {
-            name: 'Machine Learning',
-            institution: 'Coursera / Deeplearning.ai',
+            name: 'Neural Networks and Deep Learning',
+            institution: 'Coursera / Deep Learning Specialization',
             date: '2023',
-            description: 'Complete course on ML fundamentals, neural networks, and deep learning.'
+            description: 'Course 1 of Deep Learning Specialization: fundamentals of neural networks and deep learning.'
         },
         {
-            name: 'Data Quality & Integration',
-            institution: 'FING - UDELAR',
-            date: '2023',
-            description: 'Advanced techniques for data integration and quality in large datasets.'
+            name: 'Git & GitHub',
+            institution: 'Mouradev.pro',
+            date: '2025',
+            description: 'Version control with Git and collaboration on GitHub, instructor: Bruno Ottonelli.'
         },
         {
-            name: 'Digital Communications',
-            institution: 'FING - UDELAR',
-            date: '2022',
-            description: 'Digital communication systems, modulation, coding, and transmission.'
-        },
-        {
-            name: 'Graph Neural Networks',
-            institution: 'Udemy',
+            name: 'Power BI',
+            institution: 'EMPOWERDATA LATAM',
             date: '2024',
-            description: 'Introduction to GNNs and their applications in networks and graphs.'
+            description: 'Data analysis and visualization with Microsoft Power BI.'
         },
         {
-            name: 'Advanced Excel VBA',
-            institution: 'UTE',
-            date: '2021',
-            description: 'Advanced VBA programming for automation and data analysis.'
+            name: 'Pandas',
+            institution: 'Kaggle',
+            date: '2024',
+            description: 'Data manipulation and analysis with Python Pandas library.'
         },
         {
-            name: 'Signals and Communications',
-            institution: 'FING - UDELAR',
-            date: '2022',
-            description: 'Signal processing, Fourier analysis, and communication systems.'
+            name: 'English PET',
+            institution: 'Cambridge',
+            date: '2023',
+            description: 'Preliminary English Test - Intermediate level English certification.'
+        },
+        {
+            name: 'Personal Productivity',
+            institution: 'Google Activate',
+            date: '2024',
+            description: 'Techniques and tools to improve personal and professional productivity.'
+        },
+        {
+            name: 'Sales Assistant',
+            institution: 'Forge',
+            date: '2023',
+            description: 'Training in sales techniques, customer service, and commercial management.'
         }
     ]
 };
@@ -1982,12 +1994,12 @@ function CoursesSection() {
                         children: t.courses.title
                     }, void 0, false, {
                         fileName: "[project]/src/components/sections/CoursesSection.tsx",
-                        lineNumber: 101,
+                        lineNumber: 113,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/sections/CoursesSection.tsx",
-                    lineNumber: 100,
+                    lineNumber: 112,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$4_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2007,7 +2019,7 @@ function CoursesSection() {
                                                         className: "h-6 w-6 text-primary flex-shrink-0 mt-1"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/sections/CoursesSection.tsx",
-                                                        lineNumber: 114,
+                                                        lineNumber: 126,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$4_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2018,7 +2030,7 @@ function CoursesSection() {
                                                                 children: course.name
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/sections/CoursesSection.tsx",
-                                                                lineNumber: 116,
+                                                                lineNumber: 128,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$4_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2030,19 +2042,19 @@ function CoursesSection() {
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/components/sections/CoursesSection.tsx",
-                                                                lineNumber: 117,
+                                                                lineNumber: 129,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/sections/CoursesSection.tsx",
-                                                        lineNumber: 115,
+                                                        lineNumber: 127,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/sections/CoursesSection.tsx",
-                                                lineNumber: 113,
+                                                lineNumber: 125,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$4_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -2056,29 +2068,29 @@ function CoursesSection() {
                                                     className: "h-4 w-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/sections/CoursesSection.tsx",
-                                                    lineNumber: 133,
+                                                    lineNumber: 145,
                                                     columnNumber: 21
                                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$4_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$454$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__["ChevronDown"], {
                                                     className: "h-4 w-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/sections/CoursesSection.tsx",
-                                                    lineNumber: 135,
+                                                    lineNumber: 147,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/sections/CoursesSection.tsx",
-                                                lineNumber: 124,
+                                                lineNumber: 136,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/sections/CoursesSection.tsx",
-                                        lineNumber: 112,
+                                        lineNumber: 124,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/sections/CoursesSection.tsx",
-                                    lineNumber: 111,
+                                    lineNumber: 123,
                                     columnNumber: 13
                                 }, this),
                                 expandedIndex === index && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$4_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -2088,34 +2100,34 @@ function CoursesSection() {
                                         children: course.description
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/sections/CoursesSection.tsx",
-                                        lineNumber: 143,
+                                        lineNumber: 155,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/sections/CoursesSection.tsx",
-                                    lineNumber: 142,
+                                    lineNumber: 154,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, index, true, {
                             fileName: "[project]/src/components/sections/CoursesSection.tsx",
-                            lineNumber: 106,
+                            lineNumber: 118,
                             columnNumber: 13
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/src/components/sections/CoursesSection.tsx",
-                    lineNumber: 104,
+                    lineNumber: 116,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/sections/CoursesSection.tsx",
-            lineNumber: 99,
+            lineNumber: 111,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/sections/CoursesSection.tsx",
-        lineNumber: 98,
+        lineNumber: 110,
         columnNumber: 5
     }, this);
 }

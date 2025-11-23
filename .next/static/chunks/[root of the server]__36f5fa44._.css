@@ -864,10 +864,6 @@
     gap: calc(var(--spacing) * 6);
   }
 
-  .gap-8 {
-    gap: calc(var(--spacing) * 8);
-  }
-
   .gap-12 {
     gap: calc(var(--spacing) * 12);
   }
@@ -1656,16 +1652,6 @@
     position: absolute;
   }
 
-  .after\:bottom-0:after {
-    content: var(--tw-content);
-    bottom: calc(var(--spacing) * 0);
-  }
-
-  .after\:bottom-1:after {
-    content: var(--tw-content);
-    bottom: calc(var(--spacing) * 1);
-  }
-
   .after\:bottom-2:after {
     content: var(--tw-content);
     bottom: calc(var(--spacing) * 2);
@@ -1674,11 +1660,6 @@
   .after\:bottom-3:after {
     content: var(--tw-content);
     bottom: calc(var(--spacing) * 3);
-  }
-
-  .after\:left-0:after {
-    content: var(--tw-content);
-    left: calc(var(--spacing) * 0);
   }
 
   .after\:left-4:after {
@@ -1870,13 +1851,6 @@
     .hover\:after\:w-\[calc\(100\%-2rem\)\]:hover:after {
       content: var(--tw-content);
       width: calc(100% - 2rem);
-    }
-  }
-
-  @media (hover: hover) {
-    .hover\:after\:w-full:hover:after {
-      content: var(--tw-content);
-      width: 100%;
     }
   }
 
