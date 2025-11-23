@@ -70,7 +70,8 @@ export function SkillsSection() {
           </h2>
         </div>
 
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-2">
+        {/* Cambio aquí: grid-cols-1 en móvil, 2 en tablet, 4 en desktop */}
+        <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {categories.map((cat) => (
             <Card
               key={cat.key}
@@ -82,7 +83,7 @@ export function SkillsSection() {
                 </CardTitle>
               </CardHeader>
 
-              <CardContent className="grid grid-cols-2 sm:grid-cols-3 gap-6 p-6">
+              <CardContent className="grid grid-cols-2 gap-6 p-6">
                 {skillsData[cat.key].map((skill) => {
                   // Usar el icono correcto solo después de que el componente se haya montado
                   const iconToUse = mounted && theme === "dark" && skill.iconDark

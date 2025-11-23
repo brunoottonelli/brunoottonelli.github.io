@@ -28,7 +28,7 @@ export const translations = {
     skills: {
       title: 'Habilidades',
       languages: 'Lenguajes',
-      mlLibraries: 'Librerías / ML',
+      mlLibraries: 'Machine Learning',
       dataTools: 'Data & Tools',
       other: 'Otros',
     },
@@ -87,7 +87,7 @@ export const translations = {
     skills: {
       title: 'Skills',
       languages: 'Languages',
-      mlLibraries: 'Libraries / ML',
+      mlLibraries: 'Machine Learning',
       dataTools: 'Data & Tools',
       other: 'Other',
     },

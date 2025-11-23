@@ -740,6 +740,16 @@
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
 
+  .translate-y-0 {
+    --tw-translate-y: calc(var(--spacing) * 0);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+
+  .translate-y-4 {
+    --tw-translate-y: calc(var(--spacing) * 4);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+
   .scale-0 {
     --tw-scale-x: 0%;
     --tw-scale-y: 0%;
@@ -792,6 +802,10 @@
 
   .auto-rows-min {
     grid-auto-rows: min-content;
+  }
+
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
   .grid-cols-2 {
@@ -852,10 +866,6 @@
 
   .gap-8 {
     gap: calc(var(--spacing) * 8);
-  }
-
-  .gap-10 {
-    gap: calc(var(--spacing) * 10);
   }
 
   .gap-12 {
@@ -969,6 +979,10 @@
 
   .border-border {
     border-color: var(--border);
+  }
+
+  .border-current {
+    border-color: currentColor;
   }
 
   .border-emerald-500\/20 {
@@ -1216,6 +1230,10 @@
     padding-inline: calc(var(--spacing) * 4);
   }
 
+  .px-5 {
+    padding-inline: calc(var(--spacing) * 5);
+  }
+
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
   }
@@ -1230,6 +1248,10 @@
 
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
+  }
+
+  .py-3 {
+    padding-block: calc(var(--spacing) * 3);
   }
 
   .py-4 {
@@ -1639,9 +1661,19 @@
     bottom: calc(var(--spacing) * 0);
   }
 
+  .after\:bottom-1:after {
+    content: var(--tw-content);
+    bottom: calc(var(--spacing) * 1);
+  }
+
   .after\:bottom-2:after {
     content: var(--tw-content);
     bottom: calc(var(--spacing) * 2);
+  }
+
+  .after\:bottom-3:after {
+    content: var(--tw-content);
+    bottom: calc(var(--spacing) * 3);
   }
 
   .after\:left-0:after {
@@ -1652,6 +1684,11 @@
   .after\:left-4:after {
     content: var(--tw-content);
     left: calc(var(--spacing) * 4);
+  }
+
+  .after\:left-5:after {
+    content: var(--tw-content);
+    left: calc(var(--spacing) * 5);
   }
 
   .after\:h-0\.5:after {
@@ -1737,6 +1774,18 @@
   }
 
   @media (hover: hover) {
+    .hover\:bg-muted\/50:hover {
+      background-color: var(--muted);
+    }
+
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:bg-muted\/50:hover {
+        background-color: color-mix(in oklab, var(--muted) 50%, transparent);
+      }
+    }
+  }
+
+  @media (hover: hover) {
     .hover\:bg-primary\/90:hover {
       background-color: var(--primary);
     }
@@ -1807,6 +1856,13 @@
     .hover\:shadow-xl:hover {
       --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, #0000001a), 0 8px 10px -6px var(--tw-shadow-color, #0000001a);
       box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:after\:w-\[calc\(100\%-2\.5rem\)\]:hover:after {
+      content: var(--tw-content);
+      width: calc(100% - 2.5rem);
     }
   }
 
@@ -2180,6 +2236,12 @@
   @media (width >= 64rem) {
     .lg\:grid-cols-3 {
       grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media (width >= 64rem) {
+    .lg\:grid-cols-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
 

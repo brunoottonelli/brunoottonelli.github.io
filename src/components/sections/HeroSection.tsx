@@ -14,6 +14,7 @@ export function HeroSection() {
   const { theme } = useTheme();
 
   const [mounted, setMounted] = useState(false);
+  const [showScrollButton, setShowScrollButton] = useState(true);
 
   // imágenes
   const [currentImage, setCurrentImage] = useState("/images/profile-day.png");
@@ -22,6 +23,21 @@ export function HeroSection() {
 
   useEffect(() => {
     setMounted(true);
+  }, []);
+
+  // Detectar scroll para ocultar el botón
+  useEffect(() => {
+    const handleScroll = () => {
+      // Si el usuario scrollea más de 50px, ocultar el botón
+      if (window.scrollY > 50) {
+        setShowScrollButton(false);
+      } else {
+        setShowScrollButton(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   // ⭐ Crossfade con blur
@@ -149,16 +165,22 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* Scroll down arrow */}
+      {/* Scroll down arrow - se oculta al hacer scroll */}
       <button
         onClick={scrollToAbout}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group cursor-pointer"
+        className={`
+          absolute bottom-8 left-1/2 -translate-x-1/2 
+          flex flex-col items-center gap-2 
+          text-muted-foreground hover:text-primary 
+          transition-all duration-300 group cursor-pointer
+          ${showScrollButton ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}
+        `}
       >
         <span className="text-sm opacity-0 group-hover:opacity-100 transition-opacity">
           {language === 'es' ? 'Más sobre mi' : 'More about me'}
         </span>
         
-        <div className="w-10 h-10 rounded-full border-2 flex items-center justify-center animate-bounce">
+        <div className="w-10 h-10 rounded-full border-2 border-current flex items-center justify-center animate-bounce">
           <ChevronDown className="h-5 w-5" />
         </div>
       </button>

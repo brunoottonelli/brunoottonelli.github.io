@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -42,8 +41,8 @@ export function Navbar() {
     { id: 'home', label: t.nav.home },
     { id: 'about', label: t.nav.about },
     { id: 'skills', label: t.nav.skills },
-    { id: 'courses', label: t.nav.courses },
     { id: 'projects', label: t.nav.projects },
+    { id: 'courses', label: t.nav.courses },
     { id: 'contact', label: t.nav.contact },
   ];
 
@@ -59,18 +58,18 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           <button
             onClick={() => scrollToSection('home')}
-            className="cursor-pointer text-xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent hover:opacity-80 transition-opacity"
+            className="cursor-pointer px-4 py-3 text-xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent hover:opacity-80 transition-opacity rounded-md"
           >
             Bruno Ottonelli
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-1">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="cursor-pointer text-sm font-medium text-muted-foreground hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full"
+                className="cursor-pointer px-5 py-3 text-sm font-medium text-muted-foreground hover:text-primary transition-colors relative after:absolute after:bottom-2 after:left-5 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-[calc(100%-2.5rem)] rounded-md hover:bg-muted/50"
               >
                 {item.label}
               </button>
@@ -106,7 +105,7 @@ export function Navbar() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-left px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary hover:bg-muted rounded-lg transition-colors relative after:absolute after:bottom-2 after:left-4 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-[calc(100%-2rem)]"
+                  className="text-left px-4 py-4 text-sm font-medium text-muted-foreground hover:text-primary hover:bg-muted rounded-lg transition-colors relative after:absolute after:bottom-3 after:left-4 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-[calc(100%-2rem)]"
                 >
                   {item.label}
                 </button>
