@@ -6,108 +6,128 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from '@/lib/i18n';
+import { useState } from 'react';
 
-// NEW: imports necesarios para el panel lateral (sheet)
-import { useState } from "react";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetDescription,
-} from "@/components/ui/sheet";
+/* ----------------------- TIPOS ----------------------- */
+interface Project {
+  name: string;
+  description: string;
+  technologies: string[];
+  image: string;
+  github: string;
+}
 
-
-const projectsData = {
+/* --------------------- DATA -------------------------- */
+const projectsData: Record<'es' | 'en', Project[]> = {
   es: [
     {
       name: 'APNetworkEnv',
-      description: 'Entorno Gym personalizado con GNNs para optimización de redes inalámbricas. Implementa algoritmos de aprendizaje por refuerzo para mejorar la asignación de recursos.',
+      description:
+        'Entorno Gym personalizado con GNNs para optimización de redes inalámbricas. Implementa algoritmos de aprendizaje por refuerzo para mejorar la asignación de recursos.',
       technologies: ['Python', 'PyTorch Geometric', 'OpenAI Gym', 'GNN'],
-      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop',
+      image:
+        'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop',
       github: 'https://github.com/bruno-ottonelli/apnetworkenv',
     },
     {
       name: 'Pitch Detection',
-      description: 'Implementación de algoritmos GLogS y HPS para detección de pitch en señales de audio. Análisis comparativo de precisión y rendimiento.',
+      description:
+        'Implementación de algoritmos GLogS y HPS para detección de pitch en señales de audio. Análisis comparativo de precisión y rendimiento.',
       technologies: ['Python', 'NumPy', 'Matplotlib', 'Signal Processing'],
-      image: 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&h=600&fit=crop',
+      image:
+        'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&h=600&fit=crop',
       github: 'https://github.com/bruno-ottonelli/pitch-detection',
     },
     {
       name: 'Data Quality & Integration',
-      description: 'Proyecto de integración y limpieza de grandes datasets. Implementación de pipelines ETL y validación de calidad de datos.',
+      description:
+        'Proyecto de integración y limpieza de grandes datasets. Implementación de pipelines ETL y validación de calidad de datos.',
       technologies: ['Python', 'Pandas', 'SQL', 'Data Quality'],
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
+      image:
+        'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
       github: 'https://github.com/bruno-ottonelli/data-integration',
     },
     {
       name: 'Event Camera Processing',
-      description: 'Procesamiento de datos de event cameras (timestamp-x-y-polarity). Análisis de eventos para detección de movimiento y tracking.',
+      description:
+        'Procesamiento de datos de event cameras (timestamp-x-y-polarity). Análisis de eventos para detección de movimiento y tracking.',
       technologies: ['Python', 'OpenCV', 'NumPy', 'Computer Vision'],
-      image: 'https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=800&h=600&fit=crop',
+      image:
+        'https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=800&h=600&fit=crop',
       github: 'https://github.com/bruno-ottonelli/event-camera',
     },
     {
       name: 'Ambilight Raspberry Pi',
-      description: 'Sistema Ambilight DIY usando Raspberry Pi. Sincronización de LEDs con contenido de pantalla en tiempo real.',
+      description:
+        'Sistema Ambilight DIY usando Raspberry Pi. Sincronización de LEDs con contenido de pantalla en tiempo real.',
       technologies: ['Python', 'Raspberry Pi', 'Arduino', 'LED Control'],
-      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop',
+      image:
+        'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop',
       github: 'https://github.com/bruno-ottonelli/ambilight-pi',
     },
   ],
   en: [
     {
       name: 'APNetworkEnv',
-      description: 'Custom Gym environment with GNNs for wireless network optimization. Implements reinforcement learning algorithms to improve resource allocation.',
+      description:
+        'Custom Gym environment with GNNs for wireless network optimization. Implements reinforcement learning algorithms to improve resource allocation.',
       technologies: ['Python', 'PyTorch Geometric', 'OpenAI Gym', 'GNN'],
-      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop',
+      image:
+        'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop',
       github: 'https://github.com/bruno-ottonelli/apnetworkenv',
     },
     {
       name: 'Pitch Detection',
-      description: 'Implementation of GLogS and HPS algorithms for pitch detection in audio signals. Comparative analysis of accuracy and performance.',
+      description:
+        'Implementation of GLogS and HPS algorithms for pitch detection in audio signals. Comparative analysis of accuracy and performance.',
       technologies: ['Python', 'NumPy', 'Matplotlib', 'Signal Processing'],
-      image: 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&h=600&fit=crop',
+      image:
+        'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&h=600&fit=crop',
       github: 'https://github.com/bruno-ottonelli/pitch-detection',
     },
     {
       name: 'Data Quality & Integration',
-      description: 'Large dataset integration and cleaning project. Implementation of ETL pipelines and data quality validation.',
+      description:
+        'Large dataset integration and cleaning project. Implementation of ETL pipelines and data quality validation.',
       technologies: ['Python', 'Pandas', 'SQL', 'Data Quality'],
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
+      image:
+        'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
       github: 'https://github.com/bruno-ottonelli/data-integration',
     },
     {
       name: 'Event Camera Processing',
-      description: 'Event camera data processing (timestamp-x-y-polarity). Event analysis for motion detection and tracking.',
+      description:
+        'Event camera data processing (timestamp-x-y-polarity). Event analysis for motion detection and tracking.',
       technologies: ['Python', 'OpenCV', 'NumPy', 'Computer Vision'],
-      image: 'https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=800&h=600&fit=crop',
+      image:
+        'https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=800&h=600&fit=crop',
       github: 'https://github.com/bruno-ottonelli/event-camera',
     },
     {
       name: 'Ambilight Raspberry Pi',
-      description: 'DIY Ambilight system using Raspberry Pi. Real-time LED synchronization with screen content.',
+      description:
+        'DIY Ambilight system using Raspberry Pi. Real-time LED synchronization with screen content.',
       technologies: ['Python', 'Raspberry Pi', 'Arduino', 'LED Control'],
-      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop',
+      image:
+        'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop',
       github: 'https://github.com/bruno-ottonelli/ambilight-pi',
     },
   ],
 };
 
+/* -------------------- COMPONENTE ---------------------- */
 export function ProjectsSection() {
   const { language } = useLanguage();
   const t = useTranslation(language);
 
   const projects = projectsData[language];
-
-  // NEW: proyecto seleccionado (para el panel)
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
     <section id="projects" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
+        {/* Título */}
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">{t.projects.title}</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -115,6 +135,7 @@ export function ProjectsSection() {
           </p>
         </div>
 
+        {/* Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <Card
@@ -147,9 +168,8 @@ export function ProjectsSection() {
                   ))}
                 </div>
 
-                {/* Botones */}
                 <div className="flex flex-col gap-2">
-                  {/* GitHub button */}
+                  {/* GitHub */}
                   <Button
                     variant="outline"
                     className="
@@ -163,13 +183,11 @@ export function ProjectsSection() {
                     "
                     onClick={() => window.open(project.github, '_blank')}
                   >
-                    <Github className="h-4 w-4 transition-colors group-hover/button:text-primary" />
-                    <span className="transition-colors group-hover/button:text-primary">
-                      {t.projects.viewOnGithub}
-                    </span>
+                    <Github className="h-4 w-4" />
+                    {t.projects.viewOnGithub}
                   </Button>
 
-                  {/* Show more button (abre panel lateral) */}
+                  {/* Ver más */}
                   <Button
                     variant="outline"
                     className="
@@ -181,12 +199,10 @@ export function ProjectsSection() {
                       dark:hover:!bg-primary/10
                       transition-colors
                     "
-                    onClick={() => setSelectedProject(project)} // OPEN PANEL
+                    onClick={() => setSelectedProject(project)}
                   >
-                    <ArrowRight className="h-4 w-4 transition-colors group-hover/button:text-primary" />
-                    <span className="transition-colors group-hover/button:text-primary">
-                      {t.projects.showMore}
-                    </span>
+                    <ArrowRight className="h-4 w-4" />
+                    {t.projects.showMore}
                   </Button>
                 </div>
               </CardContent>
@@ -195,47 +211,66 @@ export function ProjectsSection() {
         </div>
       </div>
 
-      {/* PANEL LATERAL (Sheet) */}
-      <Sheet open={!!selectedProject} onOpenChange={() => setSelectedProject(null)}>
-        <SheetContent side="right" className="w-[380px] sm:w-[450px]">
+      {/* -------- BACKDROP (click para cerrar) -------- */}
+      {selectedProject && (
+        <div
+          className="
+            fixed inset-0 bg-black/40 backdrop-blur-sm
+            transition-opacity duration-300
+          "
+          onClick={() => setSelectedProject(null)}
+        />
+      )}
 
-          {selectedProject && (
-            <>
-              <SheetHeader>
-                <SheetTitle>{selectedProject.name}</SheetTitle>
-                <SheetDescription>{selectedProject.description}</SheetDescription>
-              </SheetHeader>
+      {/* -------- DRAWER LATERAL ---------- */}
+      <div
+        className={`
+          fixed top-0 right-0 h-full w-[420px] bg-background shadow-2xl border-l border-border
+          transform transition-transform duration-300 ease-out
+          z-50
+          ${selectedProject ? 'translate-x-0' : 'translate-x-full'}
+        `}
+      >
+        {selectedProject && (
+          <div className="p-6 overflow-y-auto h-full">
 
-              <div className="mt-6 space-y-4">
+            {/* Botón cerrar */}
+            <button
+              className="mb-4 text-sm text-muted-foreground hover:text-primary transition cursor-pointer"
+              onClick={() => setSelectedProject(null)}
+            >
+              ✕ Cerrar
+            </button>
 
-                <img
-                  src={selectedProject.image}
-                  alt={selectedProject.name}
-                  className="rounded-lg w-full"
-                />
+            <h2 className="text-2xl font-bold mb-2">{selectedProject.name}</h2>
+            <p className="text-muted-foreground mb-4">{selectedProject.description}</p>
 
-                <h3 className="font-semibold">Tecnologías</h3>
-                <div className="flex flex-wrap gap-2">
-                  {selectedProject.technologies.map((tech) => (
-                    <Badge key={tech} variant="secondary">{tech}</Badge>
-                  ))}
-                </div>
+            <img
+              src={selectedProject.image}
+              alt={selectedProject.name}
+              className="rounded-lg w-full mb-4"
+            />
 
-                <Button
-                  variant="outline"
-                  className="w-full gap-2"
-                  onClick={() => window.open(selectedProject.github, "_blank")}
-                >
-                  <Github className="h-4 w-4" />
-                  {t.projects.viewOnGithub}
-                </Button>
+            <h3 className="font-semibold mb-2">Tecnologías</h3>
+            <div className="flex flex-wrap gap-2 mb-6">
+              {selectedProject.technologies.map((tech) => (
+                <Badge key={tech} variant="secondary">
+                  {tech}
+                </Badge>
+              ))}
+            </div>
 
-              </div>
-            </>
-          )}
-
-        </SheetContent>
-      </Sheet>
+            <Button
+              variant="outline"
+              className="w-full gap-2 cursor-pointer"
+              onClick={() => window.open(selectedProject.github, '_blank')}
+            >
+              <Github className="h-4 w-4" />
+              {t.projects.viewOnGithub}
+            </Button>
+          </div>
+        )}
+      </div>
     </section>
   );
 }
