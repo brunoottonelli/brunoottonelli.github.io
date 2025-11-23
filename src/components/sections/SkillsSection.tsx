@@ -1,78 +1,110 @@
-
 'use client';
 
-import { Card, CardContent } from '@/components/ui/card';
+import { useState, useEffect } from 'react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from '@/lib/i18n';
+import { useTheme } from 'next-themes';
 
-const skillsData = {
+// Tipos
+type SkillCategory = "languages" | "ml" | "data" | "tools";
+
+interface Skill {
+  name: string;
+  icon: string;
+  iconDark?: string;   // opcional para iconos blancos
+}
+
+const skillsData: Record<SkillCategory, Skill[]> = {
   languages: [
-    { name: 'Python', icon: '🐍' },
-    { name: 'C++', icon: '⚡' },
-    { name: 'SQL', icon: '🗄️' },
-    { name: 'MATLAB', icon: '📊' },
+    { name: 'Python', icon: '/icons/python.svg' },
+    { name: 'C', icon: '/icons/C_Programming_Language.svg' },
+    { name: 'SQL', icon: '/icons/database-black.svg', iconDark: '/icons/database-white.svg' },
+    { name: 'Visual Basic', icon: '/icons/visualbasic.svg' },
   ],
-  mlLibraries: [
-    { name: 'PyTorch', icon: '🔥' },
-    { name: 'PyTorch Geometric', icon: '🕸️' },
-    { name: 'Scikit-Learn', icon: '🤖' },
+  ml: [
+    { name: 'TensorFlow', icon: '/icons/tensorflow.svg' },
+    { name: 'Keras', icon: '/icons/keras.svg' },
+    { name: 'PyTorch Geometric', icon: '/icons/PyTorch_Geometric.svg' },
+    { name: 'Scikit-learn', icon: '/icons/scikitlearn.svg', iconDark: '/icons/scikitlearn-white.svg' },
+    { name: 'Gymnasium', icon: '/icons/gymnasium_black.svg', iconDark: '/icons/gymnasium_white.svg' },
   ],
-  dataTools: [
-    { name: 'NumPy', icon: '🔢' },
-    { name: 'Pandas', icon: '🐼' },
-    { name: 'Matplotlib', icon: '📈' },
-    { name: 'Git', icon: '📦' },
-    { name: 'Linux', icon: '🐧' },
-    { name: 'Docker', icon: '🐳' },
-    { name: 'Excel / VBA', icon: '📑' },
+  data: [
+    { name: 'Pandas', icon: '/icons/pandas.svg' },
+    { name: 'NumPy', icon: '/icons/numpy.svg' },
+    { name: 'Matplotlib', icon: '/icons/matplotlib.svg' },
+    { name: 'Seaborn', icon: '/icons/seaborn.svg' },
   ],
-  other: [
-    { name: 'ESP32 / Arduino', icon: '🔌' },
-    { name: 'Raspberry Pi', icon: '🍓' },
-    { name: 'LaTeX', icon: '📝' },
+  tools: [
+    { name: 'Git', icon: '/icons/git.svg' },
+    { name: 'GitHub', icon: '/icons/github.svg', iconDark: '/icons/github-white.svg' },
+    { name: 'OpenCV', icon: '/icons/opencv.svg' },
   ],
 };
 
 export function SkillsSection() {
   const { language } = useLanguage();
   const t = useTranslation(language);
+  const { theme } = useTheme();
+  
+  // Estado para controlar si el componente ya se montó en el cliente
+  const [mounted, setMounted] = useState(false);
 
-  const categories = [
-    { key: 'languages', title: t.skills.languages, skills: skillsData.languages },
-    { key: 'mlLibraries', title: t.skills.mlLibraries, skills: skillsData.mlLibraries },
-    { key: 'dataTools', title: t.skills.dataTools, skills: skillsData.dataTools },
-    { key: 'other', title: t.skills.other, skills: skillsData.other },
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const categories: { key: SkillCategory; title: string }[] = [
+    { key: 'languages', title: t.skills.languages || 'Lenguajes de Programación' },
+    { key: 'ml', title: t.skills.mlLibraries },
+    { key: 'data', title: t.skills.dataTools },
+    { key: 'tools', title: t.skills.other },
   ];
 
   return (
     <section id="skills" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">{t.skills.title}</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold">
+            {t.skills.title}
+          </h2>
         </div>
 
-        <div className="space-y-12">
-          {categories.map((category) => (
-            <div key={category.key}>
-              <h3 className="text-xl font-semibold mb-6 text-center sm:text-left">
-                {category.title}
-              </h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-                {category.skills.map((skill) => (
-                  <Card
-                    key={skill.name}
-                    className="group hover:shadow-lg hover:scale-105 transition-all duration-300 /*cursor-pointer*/ border-2"
-                  >
-                    <CardContent className="p-6 flex flex-col items-center justify-center gap-3">
-                      <span className="text-4xl group-hover:scale-110 transition-transform">
-                        {skill.icon}
-                      </span>
-                      <p className="text-sm font-medium text-center">{skill.name}</p>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-2">
+          {categories.map((cat) => (
+            <Card
+              key={cat.key}
+              className="border-2 hover:shadow-xl transition-all duration-300 rounded-2xl"
+            >
+              <CardHeader>
+                <CardTitle className="text-xl font-semibold text-center">
+                  {cat.title}
+                </CardTitle>
+              </CardHeader>
+
+              <CardContent className="grid grid-cols-2 sm:grid-cols-3 gap-6 p-6">
+                {skillsData[cat.key].map((skill) => {
+                  // Usar el icono correcto solo después de que el componente se haya montado
+                  const iconToUse = mounted && theme === "dark" && skill.iconDark
+                    ? skill.iconDark
+                    : skill.icon;
+
+                  return (
+                    <div
+                      key={skill.name}
+                      className="flex flex-col items-center gap-3 group"
+                    >
+                      <img
+                        src={iconToUse}
+                        alt={skill.name}
+                        className="w-10 h-10 group-hover:scale-110 transition-transform"
+                      />
+                      <p className="text-sm text-center font-medium">{skill.name}</p>
+                    </div>
+                  );
+                })}
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>
