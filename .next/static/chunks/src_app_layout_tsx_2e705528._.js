@@ -6,9 +6,8 @@
   "path": "static/chunks/src_app_layout_tsx_2e705528._.js",
   "chunks": [
     "static/chunks/[root of the server]__36f5fa44._.css",
-    "static/chunks/f8f5a_@zoerai_zoer-copilot_dist_index_31030641.js",
-    "static/chunks/node_modules__pnpm_9355251c._.js",
-    "static/chunks/src_905a2d66._.js"
+    "static/chunks/node_modules__pnpm_18dea1a7._.js",
+    "static/chunks/src_components_bbba8e5e._.js"
   ],
   "source": "dynamic"
 });
