@@ -5,25 +5,13 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from '@/lib/i18n';
-import { useTheme } from 'next-themes';
 import { useEffect, useState } from "react";
 
 export function HeroSection() {
   const { language } = useLanguage();
   const t = useTranslation(language);
-  const { theme } = useTheme();
 
-  const [mounted, setMounted] = useState(false);
   const [showScrollButton, setShowScrollButton] = useState(true);
-
-  // imágenes
-  const [currentImage, setCurrentImage] = useState("/images/profile-day.png");
-  const [prevImage, setPrevImage] = useState("/images/profile-day.png");
-  const [transitioning, setTransitioning] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   // Detectar scroll para ocultar el botón
   useEffect(() => {
@@ -39,28 +27,6 @@ export function HeroSection() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  // ⭐ Crossfade con blur
-  useEffect(() => {
-    if (!mounted) return;
-
-    const next = theme === "light" 
-      ? "/images/profile-day.png" 
-      : "/images/profile.webp";
-
-    if (next === currentImage) return;
-
-    // activar transición
-    setPrevImage(currentImage);
-    setCurrentImage(next);
-    setTransitioning(true);
-
-    const timeout = setTimeout(() => {
-      setTransitioning(false);
-    }, 400); // duración del crossfade
-
-    return () => clearTimeout(timeout);
-  }, [theme, mounted, currentImage]);
 
   const handleDownloadCV = () => {
     const cvUrl = language === 'es'
@@ -79,7 +45,7 @@ export function HeroSection() {
     <section id="home" className="min-h-screen flex items-center pt-16 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          
+
           {/* LEFT — unchanged */}
           <div className="space-y-6 order-2 lg:order-1">
             <div className="space-y-4">
@@ -128,7 +94,7 @@ export function HeroSection() {
           </div>
 
 
-          {/* RIGHT — FOTO con crossfade */}
+          {/* RIGHT — FOTO con CSS switching */}
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
             <div className="relative">
 
@@ -137,24 +103,18 @@ export function HeroSection() {
 
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-3xl overflow-hidden border-4 border-border shadow-2xl">
 
-                {/* Imagen anterior (fade-out + blur-out) */}
+                {/* Light Mode Image */}
                 <img
-                  src={prevImage}
-                  className={`
-                    absolute inset-0 w-full h-full object-cover
-                    transition-all duration-500
-                    ${transitioning ? "opacity-0 blur-sm" : "opacity-100 blur-0"}
-                  `}
+                  src="/images/profile-day.png"
+                  alt={t.hero.name}
+                  className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100 dark:opacity-0"
                 />
 
-                {/* Imagen nueva (fade-in + blur-in) */}
+                {/* Dark Mode Image */}
                 <img
-                  src={currentImage}
-                  className={`
-                    absolute inset-0 w-full h-full object-cover
-                    transition-all duration-500
-                    ${transitioning ? "opacity-100 blur-0" : "opacity-0 blur-sm"}
-                  `}
+                  src="/images/profile.webp"
+                  alt={t.hero.name}
+                  className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 dark:opacity-100"
                 />
 
               </div>
@@ -179,7 +139,7 @@ export function HeroSection() {
         <span className="text-sm opacity-0 group-hover:opacity-100 transition-opacity">
           {language === 'es' ? 'Más sobre mi' : 'More about me'}
         </span>
-        
+
         <div className="w-10 h-10 rounded-full border-2 border-current flex items-center justify-center animate-bounce">
           <ChevronDown className="h-5 w-5" />
         </div>

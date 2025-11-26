@@ -31,6 +31,35 @@ export default function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var savedLang = localStorage.getItem('language');
+                  var lang = 'es'; // Default to Spanish
+                  
+                  if (savedLang === 'es' || savedLang === 'en') {
+                    lang = savedLang;
+                  } else {
+                    // Detect from browser
+                    var browserLang = navigator.language || navigator.userLanguage;
+                    if (browserLang.startsWith('en')) {
+                      lang = 'en';
+                    } else {
+                      lang = 'es';
+                    }
+                    localStorage.setItem('language', lang);
+                  }
+                  
+                  document.documentElement.setAttribute('data-language', lang);
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
+      </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         <ThemeProvider
           attribute="class"

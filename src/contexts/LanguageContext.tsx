@@ -12,12 +12,16 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguageState] = useState<Language>('en');
+  // Start with Spanish as default to match the inline script's default
+  const [language, setLanguageState] = useState<Language>('es');
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const savedLang = localStorage.getItem('language') as Language;
-    if (savedLang && (savedLang === 'es' || savedLang === 'en')) {
-      setLanguageState(savedLang);
+    setMounted(true);
+    // Read from data-language attribute set by inline script
+    const dataLang = document.documentElement.getAttribute('data-language') as Language;
+    if (dataLang === 'es' || dataLang === 'en') {
+      setLanguageState(dataLang);
     }
   }, []);
 
