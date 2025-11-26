@@ -33,25 +33,8 @@
     "dangerouslyAllowSVG": false,
     "contentSecurityPolicy": "script-src 'none'; frame-src 'none'; sandbox;",
     "contentDispositionType": "attachment",
-    "remotePatterns": [
-      {
-        "hostname": "^(?:^(?:images\\.pexels\\.com)$)$",
-        "pathname": "^(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)\\/?)$"
-      },
-      {
-        "hostname": "^(?:^(?:images\\.unsplash\\.com)$)$",
-        "pathname": "^(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)\\/?)$"
-      },
-      {
-        "hostname": "^(?:^(?:chat2db\\-cdn\\.oss\\-us\\-west\\-1\\.aliyuncs\\.com)$)$",
-        "pathname": "^(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)\\/?)$"
-      },
-      {
-        "hostname": "^(?:^(?:cdn\\.chat2db\\-ai\\.com)$)$",
-        "pathname": "^(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)\\/?)$"
-      }
-    ],
-    "unoptimized": false,
+    "remotePatterns": [],
+    "unoptimized": true,
     "sizes": [
       640,
       750,

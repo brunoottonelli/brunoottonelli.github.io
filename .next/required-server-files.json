@@ -58,21 +58,8 @@
       "dangerouslyAllowSVG": false,
       "contentSecurityPolicy": "script-src 'none'; frame-src 'none'; sandbox;",
       "contentDispositionType": "attachment",
-      "remotePatterns": [
-        {
-          "hostname": "images.pexels.com"
-        },
-        {
-          "hostname": "images.unsplash.com"
-        },
-        {
-          "hostname": "chat2db-cdn.oss-us-west-1.aliyuncs.com"
-        },
-        {
-          "hostname": "cdn.chat2db-ai.com"
-        }
-      ],
-      "unoptimized": false
+      "remotePatterns": [],
+      "unoptimized": true
     },
     "devIndicators": {
       "position": "bottom-left"
@@ -101,6 +88,7 @@
     "logging": {},
     "expireTime": 31536000,
     "staticPageGenerationTimeout": 60,
+    "output": "export",
     "modularizeImports": {
       "@mui/icons-material": {
         "transform": "@mui/icons-material/{{member}}"
