@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { ChevronDown, ChevronUp, Award, ExternalLink } from 'lucide-react';
-import Image from 'next/image';   // ← IMPORTANTE
+import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -136,6 +136,21 @@ export function CoursesSection() {
 
   return (
     <section id="courses" className="py-20 bg-muted/30">
+
+      {/* 🔥 PRECARGA INVISIBLE (todas las miniaturas se descargan al inicio) */}
+      <div className="hidden">
+        {courses.map((course, i) => (
+          <Image
+            key={i}
+            src={course.thumbnail}
+            alt=""
+            width={10}
+            height={10}
+            priority
+          />
+        ))}
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">{t.courses.title}</h2>
@@ -184,7 +199,7 @@ export function CoursesSection() {
                     {/* Descripción */}
                     <p className="text-muted-foreground flex-1">{course.description}</p>
 
-                    {/* Imagen optimizada */}
+                    {/* Imagen del certificado */}
                     <a
                       href={course.certificateUrl}
                       target="_blank"
@@ -198,10 +213,8 @@ export function CoursesSection() {
                         fill
                         className="object-cover"
                         sizes="200px"
-                        loading="lazy"
                       />
 
-                      {/* Overlay */}
                       <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-all duration-300 flex items-center justify-center">
                         <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center gap-2 text-primary">
                           <ExternalLink className="h-6 w-6" />
