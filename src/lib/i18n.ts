@@ -43,6 +43,11 @@ export const translations = {
       technologies: 'Tecnologías',
       viewOnGithub: 'Ver en GitHub',
       showMore: 'Ver más',
+      close: 'Cerrar',
+      detailedDescription: 'Descripción Detallada',
+      keyFeatures: 'Características Clave',
+      technicalChallenges: 'Desafíos Técnicos',
+      achievements: 'Logros & Resultados',
     },
     contact: {
       title: '¿Trabajamos juntos?',
@@ -102,6 +107,11 @@ export const translations = {
       technologies: 'Technologies',
       viewOnGithub: 'View on GitHub',
       showMore: 'Show more',
+      close: 'Close',
+      detailedDescription: 'Detailed Description',
+      keyFeatures: 'Key Features',
+      technicalChallenges: 'Technical Challenges',
+      achievements: 'Achievements & Results',
     },
     contact: {
       title: "Let's Work Together?",
