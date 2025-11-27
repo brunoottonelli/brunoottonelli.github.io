@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { ChevronDown, ChevronUp, Award, ExternalLink } from 'lucide-react';
+import Image from 'next/image';   // ← IMPORTANTE
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -144,8 +145,8 @@ export function CoursesSection() {
           {courses.map((course, index) => (
             <Card
               key={index}
-              className="border-2 hover:shadow-lg transition-all duration-300 cursor-pointer"  
-              onClick={() => setExpandedIndex(expandedIndex === index ? null : index)} 
+              className="border-2 hover:shadow-lg transition-all duration-300 cursor-pointer"
+              onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}
             >
               <CardHeader>
                 <div className="flex items-start justify-between gap-4">
@@ -158,12 +159,12 @@ export function CoursesSection() {
                       </p>
                     </div>
                   </div>
-            
+
                   <Button
                     variant="ghost"
                     size="sm"
                     onClick={(e) => {
-                      e.stopPropagation();  
+                      e.stopPropagation();
                       setExpandedIndex(expandedIndex === index ? null : index);
                     }}
                   >
@@ -175,14 +176,15 @@ export function CoursesSection() {
                   </Button>
                 </div>
               </CardHeader>
-            
+
               {expandedIndex === index && (
                 <CardContent className="pt-0">
                   <div className="flex gap-6 items-start">
-                    {/* Descripción del curso */}
+
+                    {/* Descripción */}
                     <p className="text-muted-foreground flex-1">{course.description}</p>
-                    
-                    {/* Miniatura del certificado */}
+
+                    {/* Imagen optimizada */}
                     <a
                       href={course.certificateUrl}
                       target="_blank"
@@ -190,14 +192,16 @@ export function CoursesSection() {
                       className="relative group flex-shrink-0 w-48 aspect-[3/2] rounded-lg overflow-hidden border-2 border-border hover:border-primary transition-all duration-300"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      {/* Imagen del certificado */}
-                      <img
+                      <Image
                         src={course.thumbnail}
                         alt={`Certificado de ${course.name}`}
-                        className="w-full h-full object-cover"
+                        fill
+                        className="object-cover"
+                        sizes="200px"
+                        loading="lazy"
                       />
-                      
-                      {/* Overlay con hover effect */}
+
+                      {/* Overlay */}
                       <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-all duration-300 flex items-center justify-center">
                         <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center gap-2 text-primary">
                           <ExternalLink className="h-6 w-6" />
@@ -207,6 +211,7 @@ export function CoursesSection() {
                         </div>
                       </div>
                     </a>
+
                   </div>
                 </CardContent>
               )}
