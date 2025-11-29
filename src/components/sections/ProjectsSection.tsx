@@ -16,14 +16,53 @@ interface Project {
   technologies: string[];
   image: string;
   github: string;
-  features: string[];
-  challenges: string[];
-  achievements: string[];
+  features?: string[];
+  challenges?: string[];
+  achievements?: string[];
 }
 
 /* --------------------- DATA -------------------------- */
 const projectsData: Record<'es' | 'en', Project[]> = {
   es: [
+    {
+      name: 'Sistema de Automatización para el Área de Redes – UTE',
+      description: 'VBA / Excel – Proyecto real en producción',
+      detailedDescription:
+        'En el área de Redes de Distribución de UTE detecté información dispersa, procesos muy manuales y la ausencia de una herramienta moderna para gestionar compras, entregas y planificación presupuestal. Para resolverlo, desarrollé un sistema integral en VBA que centraliza datos y automatiza tareas críticas.',
+      technologies: [
+        'VBA',
+        'Excel avanzado',
+        'Procesamiento de reportes SAP',
+        'Diseño de bases de datos simples',
+        'Automatización de procesos',
+        'UX accesible',
+        'Levantamiento de requerimientos',
+      ],
+      image:
+        'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
+      github: '#',
+      features: [
+        'Importa y procesa automáticamente reportes SAP, transformándolos en tablas limpias y relacionables',
+        'Organiza la información en estructuras de datos centralizadas',
+        'Ofrece una interfaz intuitiva (botones, formularios y acciones guiadas)',
+        'Automatiza tareas clave: actualización de saldos y precios, generación de reportes, seguimiento de entregas, exportación de tablas',
+        'Incluye herramientas de visualización y previsión, útiles para planificar presupuesto y compras',
+      ],
+      challenges: [
+        'Datos distribuidos en varios archivos y versiones',
+        'Procesos repetitivos que demandaban horas o días',
+        'Falta de seguimiento claro de entregas de materiales',
+        'Dificultad para prever qué mercadería ingresaría cada mes',
+        'Información exportada desde SAP, pero sin una manera práctica de procesarla o visualizarla',
+      ],
+      achievements: [
+        'Reducción significativa del tiempo dedicado a tareas mecánicas',
+        'Mayor claridad en el estado de compras y entregas',
+        'Procesamiento automático de datos SAP adaptado a las necesidades del equipo',
+        'Mejor previsión de materiales y presupuestos',
+        'Sistema estable, escalable y utilizado diariamente',
+      ],
+    },
     {
       name: 'APNetworkEnv',
       description:
@@ -92,7 +131,7 @@ const projectsData: Record<'es' | 'en', Project[]> = {
         'Sistema completo de ETL (Extract, Transform, Load) diseñado para integrar múltiples fuentes de datos heterogéneas, con énfasis en la validación de calidad y la detección de anomalías. Implementa reglas de negocio complejas y procesos de reconciliación automatizados.',
       technologies: ['Python', 'Pandas', 'SQL', 'Data Quality'],
       image:
-        'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
+        '/images/projects-thumbnails/CaDQM-thumbnail2.png',
       github: 'https://github.com/bruno-ottonelli/data-integration',
       features: [
         'Pipeline ETL modular y escalable',
@@ -177,6 +216,45 @@ const projectsData: Record<'es' | 'en', Project[]> = {
   ],
   en: [
     {
+      name: 'Automation System for Network Area – UTE',
+      description: 'VBA / Excel – Real project in production',
+      detailedDescription:
+        'In the UTE Distribution Network area, I detected scattered information, very manual processes, and the absence of a modern tool to manage purchases, deliveries, and budget planning. To solve this, I developed a comprehensive system in VBA that centralizes data and automates critical tasks.',
+      technologies: [
+        'VBA',
+        'Advanced Excel',
+        'SAP Report Processing',
+        'Simple Database Design',
+        'Process Automation',
+        'Accessible UX',
+        'Requirements Gathering',
+      ],
+      image:
+        'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
+      github: '#',
+      features: [
+        'Automatically imports and processes SAP reports, transforming them into clean and relational tables',
+        'Organizes information in centralized data structures',
+        'Offers an intuitive interface (buttons, forms, and guided actions)',
+        'Automates key tasks: balance and price updates, report generation, delivery tracking, table export',
+        'Includes visualization and forecasting tools, useful for budget and purchase planning',
+      ],
+      challenges: [
+        'Data distributed in various files and versions',
+        'Repetitive processes that demanded hours or days',
+        'Lack of clear tracking of material deliveries',
+        'Difficulty foreseeing what merchandise would enter each month',
+        'Information exported from SAP, but without a practical way to process or visualize it',
+      ],
+      achievements: [
+        'Significant reduction in time spent on mechanical tasks',
+        'Greater clarity in the status of purchases and deliveries',
+        'Automatic processing of SAP data adapted to the team needs',
+        'Better forecasting of materials and budgets',
+        'Stable, scalable system used daily',
+      ],
+    },
+    {
       name: 'APNetworkEnv',
       description:
         'Custom Gym environment with GNNs for wireless network optimization. Implements reinforcement learning algorithms to improve resource allocation.',
@@ -244,7 +322,7 @@ const projectsData: Record<'es' | 'en', Project[]> = {
         'Complete ETL (Extract, Transform, Load) system designed to integrate multiple heterogeneous data sources, with emphasis on quality validation and anomaly detection. Implements complex business rules and automated reconciliation processes.',
       technologies: ['Python', 'Pandas', 'SQL', 'Data Quality'],
       image:
-        'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
+        '/images/projects-thumbnails/CaDQM-thumbnail2.png',
       github: 'https://github.com/bruno-ottonelli/data-integration',
       features: [
         'Modular and scalable ETL pipeline',
@@ -492,61 +570,61 @@ export function ProjectsSection() {
             <div className="border-t border-border my-6"></div>
 
             {/* Características Clave */}
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
-                <span className="text-primary">✨</span>
-                {t.projects.keyFeatures}
-              </h3>
-              <ul className="space-y-2">
-                {selectedProject.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
-                    <span className="text-primary mt-1">▹</span>
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Divider */}
-            <div className="border-t border-border my-6"></div>
+            {selectedProject.features && selectedProject.features.length > 0 && (
+              <div className="mb-6">
+                <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                  <span className="text-primary">✨</span>
+                  {t.projects.keyFeatures}
+                </h3>
+                <ul className="space-y-2">
+                  {selectedProject.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <span className="text-primary mt-1">▹</span>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="border-t border-border my-6"></div>
+              </div>
+            )}
 
             {/* Desafíos Técnicos */}
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
-                <span className="text-primary">⚡</span>
-                {t.projects.technicalChallenges}
-              </h3>
-              <ul className="space-y-2">
-                {selectedProject.challenges.map((challenge, idx) => (
-                  <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
-                    <span className="text-primary mt-1">▹</span>
-                    <span>{challenge}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Divider */}
-            <div className="border-t border-border my-6"></div>
+            {selectedProject.challenges && selectedProject.challenges.length > 0 && (
+              <div className="mb-6">
+                <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                  <span className="text-primary">⚡</span>
+                  {t.projects.technicalChallenges}
+                </h3>
+                <ul className="space-y-2">
+                  {selectedProject.challenges.map((challenge, idx) => (
+                    <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <span className="text-primary mt-1">▹</span>
+                      <span>{challenge}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="border-t border-border my-6"></div>
+              </div>
+            )}
 
             {/* Logros & Resultados */}
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
-                <span className="text-primary">🎯</span>
-                {t.projects.achievements}
-              </h3>
-              <ul className="space-y-2">
-                {selectedProject.achievements.map((achievement, idx) => (
-                  <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
-                    <span className="text-primary mt-1">▹</span>
-                    <span>{achievement}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Divider */}
-            <div className="border-t border-border my-6"></div>
+            {selectedProject.achievements && selectedProject.achievements.length > 0 && (
+              <div className="mb-6">
+                <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                  <span className="text-primary">🎯</span>
+                  {t.projects.achievements}
+                </h3>
+                <ul className="space-y-2">
+                  {selectedProject.achievements.map((achievement, idx) => (
+                    <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <span className="text-primary mt-1">▹</span>
+                      <span>{achievement}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="border-t border-border my-6"></div>
+              </div>
+            )}
 
             {/* Tecnologías */}
             <div className="mb-6">
