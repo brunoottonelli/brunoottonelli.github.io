@@ -124,7 +124,7 @@ const projectsData: Record<'es' | 'en', Project[]> = {
       ]
     },
     {
-      name: 'Data Quality & Integration',
+      name: 'Estudio de la calidad de una base de datos de librerías.',
       description:
         'Proyecto de integración y limpieza de grandes datasets. Implementación de pipelines ETL y validación de calidad de datos.',
       detailedDescription:
@@ -132,7 +132,7 @@ const projectsData: Record<'es' | 'en', Project[]> = {
       technologies: ['Python', 'Pandas', 'SQL', 'Data Quality'],
       image:
         '/images/projects-thumbnails/CaDQM-thumbnail2.png',
-      github: 'https://github.com/bruno-ottonelli/data-integration',
+      github: 'https://github.com/brunoottonelli/Analisis-Calidad-de-Datos-DB-Libreria',
       features: [
         'Pipeline ETL modular y escalable',
         'Validación multinivel de calidad de datos',
@@ -323,7 +323,7 @@ const projectsData: Record<'es' | 'en', Project[]> = {
       technologies: ['Python', 'Pandas', 'SQL', 'Data Quality'],
       image:
         '/images/projects-thumbnails/CaDQM-thumbnail2.png',
-      github: 'https://github.com/bruno-ottonelli/data-integration',
+      github: 'https://github.com/brunoottonelli/Analisis-Calidad-de-Datos-DB-Libreria',
       features: [
         'Modular and scalable ETL pipeline',
         'Multi-level data quality validation',

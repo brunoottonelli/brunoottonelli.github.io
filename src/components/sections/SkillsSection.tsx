@@ -45,8 +45,8 @@ const skillsData: Record<SkillCategory, Skill[]> = {
 export function SkillsSection() {
   const { language } = useLanguage();
   const t = useTranslation(language);
-  const { theme } = useTheme();
-  
+  const { theme, resolvedTheme } = useTheme();
+
   // Estado para controlar si el componente ya se montó en el cliente
   const [mounted, setMounted] = useState(false);
 
@@ -86,7 +86,9 @@ export function SkillsSection() {
               <CardContent className="grid grid-cols-2 gap-6 p-6">
                 {skillsData[cat.key].map((skill) => {
                   // Usar el icono correcto solo después de que el componente se haya montado
-                  const iconToUse = mounted && theme === "dark" && skill.iconDark
+                  // Usamos resolvedTheme para manejar correctamente el modo "system"
+                  const isDark = mounted && (theme === "dark" || resolvedTheme === "dark");
+                  const iconToUse = isDark && skill.iconDark
                     ? skill.iconDark
                     : skill.icon;
 
@@ -98,8 +100,17 @@ export function SkillsSection() {
                       <img
                         src={iconToUse}
                         alt={skill.name}
-                        className="w-10 h-10 group-hover:scale-110 transition-transform"
+                        className="w-10 h-10 group-hover:scale-110 transition-all duration-300"
+                        style={{
+                          filter: 'drop-shadow(0 0 0 transparent)', // Default state
+                        }}
                       />
+                      {/* Estilo inline para el hover glow para asegurar que funcione con la variable CSS */}
+                      <style jsx>{`
+                        .group:hover img {
+                          filter: drop-shadow(0 0 8px var(--primary));
+                        }
+                      `}</style>
                       <p className="text-sm text-center font-medium">{skill.name}</p>
                     </div>
                   );
